@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   PAPERSTORY — GLOBALS
+   ============================================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: theme("colors.paper");
+    color: theme("colors.ink");
+    font-family: theme("fontFamily.sans");
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+
+  ::selection {
+    background: theme("colors.yellow");
+    color: theme("colors.ink");
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: theme("fontFamily.display");
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+}
+
+@layer components {
+  /* Strike-through accent on hero */
+  .strike {
+    position: relative;
+    display: inline-block;
+  }
+  .strike::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    top: 52%;
+    height: 10px;
+    background: theme("colors.coral");
+    border-radius: 2px;
+    transform: rotate(-2deg);
+    transform-origin: left center;
+    animation: strikeIn 1.1s cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s both;
+  }
+
+  @keyframes strikeIn {
+    from {
+      transform: scaleX(0) rotate(-2deg);
+    }
+    to {
+      transform: scaleX(1) rotate(-2deg);
+    }
+  }
+
+  /* Card primitive */
+  .neo-card {
+    @apply bg-white border-3 border-ink rounded-neo-xl shadow-neo transition-all duration-200;
+  }
+  .neo-card:hover {
+    @apply -translate-x-1 -translate-y-1 shadow-neo-lg;
+  }
+
+  /* Button primitives */
+  .btn {
+    @apply inline-flex items-center gap-2.5 font-display text-base text-ink bg-white px-6 py-4 border-3 border-ink rounded-full shadow-neo cursor-pointer transition-all duration-150 whitespace-nowrap no-underline;
+  }
+  .btn:hover {
+    @apply -translate-x-[3px] -translate-y-[3px] shadow-neo-lg;
+  }
+  .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 theme("colors.ink");
+  }
+  .btn-primary {
+    @apply bg-coral;
+  }
+
+  /* Pill */
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 font-display text-xs uppercase tracking-wider border-2 border-ink rounded-full bg-white;
+  }
+}
+
+/* Stopwatch hand animation (uses translate inside, can't easily Tailwind-ify) */
+.stopwatch::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 38px;
+  background: theme("colors.ink");
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  animation: tick 1.6s linear infinite;
+}
+
+/* Floating rotation needs CSS variables for each card */
+.fc-1 {
+  --rot: 6deg;
+}
+.fc-2 {
+  --rot: -5deg;
+}
+.fc-3 {
+  --rot: 3deg;
+}
+.fc-4 {
+  --rot: -7deg;
+}
