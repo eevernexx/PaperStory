@@ -1,5 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../styles/globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#FFF8E7",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paperstory.vercel.app"),
