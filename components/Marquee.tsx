@@ -18,14 +18,14 @@ export default function Marquee() {
         <span className="inline-flex items-center gap-[60px]">
           SCROLLYTELLING <span className="text-coral text-[22px]">✦</span>
           DATA AS NARRATIVE <span className="text-coral text-[22px]">✦</span>
-          AI STORY GENERATION{" "}
+          10 SCENES PER PAPER{" "}
           <span className="text-coral text-[22px]">✦</span>
           EDITORIAL DESIGN <span className="text-coral text-[22px]">✦</span>
           RESEARCH, REIMAGINED{" "}
           <span className="text-coral text-[22px]">✦</span>
           SCROLLYTELLING <span className="text-coral text-[22px]">✦</span>
           DATA AS NARRATIVE <span className="text-coral text-[22px]">✦</span>
-          AI STORY GENERATION{" "}
+          10 SCENES PER PAPER{" "}
           <span className="text-coral text-[22px]">✦</span>
           EDITORIAL DESIGN <span className="text-coral text-[22px]">✦</span>
           RESEARCH, REIMAGINED{" "}

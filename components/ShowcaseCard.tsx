@@ -54,16 +54,7 @@ export default function ShowcaseCardComponent({ card, art, delay = 0 }: Props) {
     );
   }
 
-  return (
-    <button
-      onClick={() =>
-        alert(
-          "This story is in production. Tap the F1 story for the working demo."
-        )
-      }
-      className="block text-left w-full"
-    >
-      {inner}
-    </button>
-  );
+  // Fallback for not-yet-available stories. All six current stories are
+  // available, so this branch is informational only.
+  return <div className="opacity-60 cursor-default">{inner}</div>;
 }

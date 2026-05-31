@@ -51,7 +51,7 @@ import ArResultsScene from "./viz/ar/ArResultsScene";
 import ArImpactScene from "./viz/ar/ArImpactScene";
 import ArConclusionScene from "./viz/ar/ArConclusionScene";
 
-// Neural (replaces chatbot)
+// Neural (Virtual Strategy Engineer)
 import NeuralIntroScene from "./viz/neural/NeuralIntroScene";
 import NeuralProblemScene from "./viz/neural/NeuralProblemScene";
 import NeuralMotivationScene from "./viz/neural/NeuralMotivationScene";
