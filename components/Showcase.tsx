@@ -65,14 +65,36 @@ const ART: Record<string, JSX.Element> = {
       <path d="M 92 140 L 130 90" stroke="#0A0A0A" strokeWidth="2.5" strokeDasharray="4 4" fill="none" />
     </svg>
   ),
-  chatbot: (
-    <svg viewBox="0 0 220 200" width="75%">
-      <rect x="20" y="40" width="120" height="30" rx="14" fill="#B8F2C9" stroke="#0A0A0A" strokeWidth="3" />
-      <text x="32" y="60" fontFamily="DM Sans" fontSize="13" fill="#0A0A0A">Halo, mau pesan?</text>
-      <rect x="60" y="90" width="120" height="30" rx="14" fill="#FFE066" stroke="#0A0A0A" strokeWidth="3" />
-      <text x="72" y="110" fontFamily="DM Sans" fontSize="13" fill="#0A0A0A">Nasi goreng 2 👍</text>
-      <rect x="20" y="140" width="140" height="30" rx="14" fill="#B8F2C9" stroke="#0A0A0A" strokeWidth="3" />
-      <text x="32" y="160" fontFamily="DM Sans" fontSize="13" fill="#0A0A0A">Total Rp 30.000 ✓</text>
+  neural: (
+    <svg viewBox="0 0 260 200" width="78%">
+      {/* input layer (4) */}
+      {[40, 80, 120, 160].map((cy, i) => (
+        <circle key={`in-${i}`} cx="40" cy={cy} r="11" fill="#FFE066" stroke="#0A0A0A" strokeWidth="3" />
+      ))}
+      {/* hidden layer (3) */}
+      {[60, 100, 140].map((cy, i) => (
+        <circle key={`h-${i}`} cx="130" cy={cy} r="13" fill="#FF6B6B" stroke="#0A0A0A" strokeWidth="3" />
+      ))}
+      {/* output (PIT? / COMPOUND) */}
+      <circle cx="220" cy="80" r="13" fill="#B8F2C9" stroke="#0A0A0A" strokeWidth="3" />
+      <circle cx="220" cy="120" r="13" fill="#A8D8FF" stroke="#0A0A0A" strokeWidth="3" />
+      {/* edges in -> h */}
+      {[40, 80, 120, 160].flatMap((y1) =>
+        [60, 100, 140].map((y2) => (
+          <line key={`e-${y1}-${y2}`} x1="51" y1={y1} x2="119" y2={y2} stroke="#0A0A0A" strokeWidth="1" opacity="0.35" />
+        ))
+      )}
+      {/* edges h -> out */}
+      {[60, 100, 140].flatMap((y1) =>
+        [80, 120].map((y2) => (
+          <line key={`o-${y1}-${y2}`} x1="141" y1={y1} x2="209" y2={y2} stroke="#0A0A0A" strokeWidth="1" opacity="0.35" />
+        ))
+      )}
+      {/* labels */}
+      <text x="40" y="190" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" fill="#0A0A0A">features</text>
+      <text x="130" y="190" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" fill="#0A0A0A">64×3</text>
+      <text x="220" y="60" fontFamily="JetBrains Mono" fontSize="9" textAnchor="middle" fill="#0A0A0A">pit?</text>
+      <text x="220" y="148" fontFamily="JetBrains Mono" fontSize="9" textAnchor="middle" fill="#0A0A0A">tire</text>
     </svg>
   ),
   design: (
