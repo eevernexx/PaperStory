@@ -1,133 +1,178 @@
 # PaperStory
 
-> Research deserves better than PDFs.
+**Research deserves better than PDFs.**
 
-Interactive scrollytelling platform that transforms academic papers into immersive narrative experiences.
+[![Live Demo](https://img.shields.io/badge/demo-vercel-black?style=flat-square)](https://paperstory.vercel.app)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 
-Built with **Next.js 14 (App Router)** · **TypeScript** · **TailwindCSS** · **Framer Motion**.
+PaperStory transforms academic research papers into immersive scrollytelling experiences. Each paper becomes a 10-scene interactive narrative with animated visualizations, editorial typography, and scroll-driven storytelling.
 
----
+## Papers
 
-## Setup
+| Story | Authors | Published | Read |
+|---|---|---|---|
+| F1: A Fast and Programmable Accelerator for FHE | Feldmann, Samardzic, Krastev, Devadas, Dreslinski, Peikert, Sanchez | MICRO 2021 | [Read &#8599;](https://doi.org/10.1145/3466752.3480070) |
+| A Roasted Coffee Bean Identification Using ResNet50 | Aqsel, Rachmawanto | JAIC 2025 | [Read &#8599;](http://jurnal.polibatam.ac.id/index.php/JAIC) |
+| Legal Politics of Indonesian Environmental Management | Mahardika, Bayu | IJEL 2022 | [Read &#8599;](https://doi.org/10.15294/ijel.v1i1.56781) |
+| AR Sebagai Media Pembelajaran Bangun Ruang (Single Marker) | Husnia, Wibisono | JAMASTIKA 2022 | [Read &#8599;](https://ejournal.unwaha.ac.id/index.php/JAMASTIKA) |
+| Virtual Strategy Engineer (Neural Networks for F1) | Heilmeier, Thomaser, Graf, Betz | Appl. Sci. 2020 | [Read &#8599;](https://doi.org/10.3390/app10217805) |
+| Desain Grafis Sebagai Media Ungkap Periklanan | R. Kuncoro Wulan Dewojati | UNY | [Read &#8599;](https://journal.uny.ac.id/) |
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript 5 (strict) |
+| Styling | TailwindCSS 3 |
+| Animation | Framer Motion 11 |
+| Rendering | Static Site Generation (SSG) |
+| Deployment | Vercel |
+
+## Architecture
+
+PaperStory is a scrollytelling app. Each story is a 10-scene narrative.
+
+- **`StorySection`** uses an IntersectionObserver (`useInView`) to detect which section is in view and reports the active scene up to `StoryClient`.
+- **`StoryClient`** holds the active scene state and renders both halves of the layout: scrolling narrative on the left, sticky visualization on the right.
+- **`VizStage`** dispatches the active scene to a per-story component via `slug` + `SceneId`. Transitions between scenes use `AnimatePresence`.
+- Every story route (`/stories/[slug]`) is pre-rendered at build time via `generateStaticParams`. There is no runtime server.
+
+```
+[scroll] -> StorySection sees section -> setActiveScene(id)
+                                         |
+                                         v
+                                   VizStage(active, slug)
+                                         |
+                                         v
+                             <SomeScene active={true} />
+```
+
+## Project Structure
+
+```
+paperstory-next/
++- app/
+|  +- layout.tsx              Root layout, fonts, OG metadata
+|  +- page.tsx                Landing
+|  +- stories/[slug]/page.tsx Per-story SSG route
++- components/
+|  +- Nav.tsx                 Sticky nav (desktop + mobile)
+|  +- MobileMenu.tsx          Hamburger overlay
+|  +- Hero.tsx                Landing hero with floating cards
+|  +- Marquee.tsx             Headline ticker
+|  +- Features.tsx            Asymmetric feature grid
+|  +- Showcase.tsx            6-card paper grid
+|  +- ShowcaseCard.tsx        Individual paper card
+|  +- CTA.tsx                 Bottom call-to-action
+|  +- Footer.tsx              Site footer
+|  +- StoryNav.tsx            Story page top nav with progress
+|  +- StorySection.tsx        Scroll-observed narrative section
+|  +- StoryClient.tsx         Story page client wrapper
+|  +- VizStage.tsx            Slug-routed scene dispatcher
+|  +- Attribution.tsx         Authors/journal/year pill
+|  +- PaperLinkButton.tsx     Original-paper external link
+|  +- FeatureCard.tsx         Feature card primitive
+|  +- Reveal.tsx              Scroll-reveal wrapper
+|  +- viz/
+|     +- f1/        10 scenes (intro -> conclusion)
+|     +- coffee/    10 scenes
+|     +- legal/     10 scenes
+|     +- ar/        10 scenes
+|     +- neural/    10 scenes
+|     +- design/    10 scenes
++- lib/
+|  +- scenes.ts               Story registry, SceneId, per-slug scene order
+|  +- f1-story.tsx            F1 narrative (10 sections)
+|  +- coffee-story.tsx        Coffee narrative
+|  +- legal-story.tsx         Legal narrative
+|  +- ar-story.tsx            AR narrative
+|  +- neural-story.tsx        Neural narrative
+|  +- design-story.tsx        Design narrative
++- public/
+|  +- favicon.svg
+|  +- og-image.svg
++- styles/
+|  +- globals.css
++- pdf paper/                  Source PDFs
+```
+
+## Local Development
 
 ```bash
-# 1. Install dependencies
+git clone https://github.com/eevernexx/paperstory.git
+cd paperstory
 npm install
-
-# 2. Run dev server
 npm run dev
-
-# 3. Open http://localhost:3000
+# -> http://localhost:3000
 ```
 
-### Production build
+## Adding a Story
+
+1. Add a `ShowcaseCard` entry to `showcase` in `lib/scenes.ts` with `slug`, `title`, `category`, `bgColor`, `paperUrl`, `authors`, `journal`, `year`.
+2. Add the 10-scene order to `sceneOrderByStory` in the same file.
+3. Create `lib/<slug>-story.tsx` with a `StorySectionData[]` matching the order.
+4. Create `components/viz/<slug>/` with 10 scene components (one per scene id).
+5. Wire the new slug into `components/VizStage.tsx` and `app/stories/[slug]/page.tsx`.
+6. `npm run build` to verify the route is generated.
+
+## Design System
+
+### Color palette
+
+| Token | Hex | Usage |
+|---|---|---|
+| coral | `#FF6B6B` | Primary accent, results, CTAs |
+| mint | `#B8F2C9` | Dataset / agriculture scenes |
+| lavender | `#C9B6FF` | Problem / motivation scenes |
+| sky | `#A8D8FF` | Architecture / method scenes |
+| peach | `#FFB89E` | Intro / soft accents |
+| yellow | `#FFE066` | Results / training / highlights |
+| pink | `#FFB8D9` | Conclusion scenes |
+| ink | `#0A0A0A` | Borders, text |
+| paper | `#FFF8E7` | Background |
+
+### Typography
+
+| Token | Family | Usage |
+|---|---|---|
+| display | Archivo Black | Headings, numbers |
+| serif | Fraunces (italic) | Accent phrases |
+| sans | DM Sans | Body |
+| mono | JetBrains Mono | Labels, code, data |
+
+### Tokens
+
+- Shadow: `neo` = `6px 6px 0 #0A0A0A`
+- Border: 3px solid `#0A0A0A`
+- Radius: 28px (xl), 20px (lg), 14px (md)
+
+## Story Architecture
+
+Each story is structured as 10 scenes:
+
+```
+intro -> problem -> motivation -> [domain-1] -> dataset/background ->
+method -> [domain-2] -> results -> comparison/impact -> conclusion
+```
+
+Domain-specific scenes vary per paper (architecture, benchmark, training, articles, reform, tech, usability, elements, functions). All scenes share the same scrolling-content / sticky-viz split.
+
+## Deployment
 
 ```bash
-npm run build
-npm run start
+npm run build   # verify zero errors
+git push        # Vercel auto-deploys
 ```
 
----
+## License
 
-## Cara pakai (Bahasa Indonesia)
+Code: MIT. Paper content remains property of respective authors and journals. Two of the papers are CC-BY-SA (JAIC for coffee, IJEL for legal). Paper figures and original text are not redistributed.
 
-1. Pastikan **Node.js 18.17+** sudah terinstal. Cek dengan `node -v`.
-2. Buka terminal di folder ini.
-3. Jalankan `npm install` — sekali aja, untuk install semua dependency.
-4. Jalankan `npm run dev` — buka `http://localhost:3000` di browser.
-5. Edit file mana aja → browser auto-reload.
+## Author
 
----
-
-## Project structure
-
-```
-app/
-  layout.tsx                 ← Root layout, fonts, global styles
-  page.tsx                   ← Landing page
-  stories/[slug]/page.tsx    ← Dynamic story route (server component)
-
-components/
-  Nav.tsx                    ← Top sticky nav
-  Hero.tsx                   ← Hero with floating cards parallax
-  Marquee.tsx                ← Scrolling tagline ribbon
-  Features.tsx               ← Features grid section
-  FeatureCard.tsx            ← Single feature card primitive
-  Showcase.tsx               ← Story showcase grid section
-  ShowcaseCard.tsx           ← Single story card
-  CTA.tsx                    ← Dark CTA band
-  Footer.tsx                 ← Footer
-  Reveal.tsx                 ← Reusable scroll-reveal wrapper
-  UploadModal.tsx            ← Upload preview modal
-  StoryNav.tsx               ← Story page top nav with progress
-  StorySection.tsx           ← Single narrative section (drives scene state)
-  StoryClient.tsx            ← Story page client orchestrator
-  VizStage.tsx               ← Sticky right-side viz container
-  viz/
-    IntroScene.tsx           ← Scene 1 — race car illustration
-    ProblemScene.tsx         ← Scene 2 — animated variance counter
-    DatasetScene.tsx         ← Scene 3 — scatter plot
-    MethodScene.tsx          ← Scene 4 — pipeline flow
-    ResultsScene.tsx         ← Scene 5 — animated bar race
-    ImpactScene.tsx          ← Scene 6 — RMSE counter w/ sparkles
-    ConclusionScene.tsx      ← Scene 7 — scorecard stack
-
-lib/
-  scenes.ts                  ← Scene IDs, showcase registry
-  f1-story.tsx               ← F1 story narrative content
-  upload-modal.tsx           ← Upload modal context
-
-styles/
-  globals.css                ← Tailwind base + design system primitives
-
-tailwind.config.ts           ← Design tokens (colors, shadows, fonts, keyframes)
-```
-
----
-
-## Adding a new story
-
-1. Create a new file in `lib/` (e.g. `lib/coffee-story.tsx`) with the same shape as `f1-story.tsx`.
-2. Open `lib/scenes.ts` and flip the relevant showcase card's `available: false` → `available: true`.
-3. Open `app/stories/[slug]/page.tsx` and add an entry to the `STORIES` registry.
-4. If the new story needs different viz scenes, add them in `components/viz/` and extend `SceneId` + `VizStage.tsx`.
-
----
-
-## Deploy to Vercel
-
-```bash
-# 1. Push to GitHub
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/eevernexx/paperstory.git
-git push -u origin main
-
-# 2. Go to vercel.com → New Project → Import this repo
-# 3. Vercel auto-detects Next.js. Click Deploy.
-```
-
----
-
-## Design system
-
-| Token         | Value     | Use                              |
-| ------------- | --------- | -------------------------------- |
-| `bg-paper`    | `#FFF8E7` | Page background                  |
-| `bg-ink`      | `#0A0A0A` | Text, borders, dark CTA          |
-| `bg-coral`    | `#FF6B6B` | Primary accent, featured states  |
-| `bg-yellow`   | `#FFE066` | Highlights, blockquotes          |
-| `bg-mint`     | `#B8F2C9` | Cards                            |
-| `bg-lavender` | `#C9B6FF` | Cards                            |
-| `bg-sky`      | `#A8D8FF` | Cards                            |
-| `bg-peach`    | `#FFB89E` | Cards                            |
-| `bg-pink`     | `#FFB8D9` | Conclusion scene                 |
-| `shadow-neo`  | `6px 6px 0 #0A0A0A` | Standard neobrutalism shadow |
-| `border-3`    | `3px solid` | Standard card outline          |
-
-Fonts: **Archivo Black** (display) · **Fraunces** italic (accent) · **DM Sans** (body) · **JetBrains Mono** (data).
-
----
-
-© 2026 PaperStory · Built by Aqsel · Semarang, Indonesia
+**Aryasatya Muhammad Aqsel**
+Informatics Engineering, Universitas Dian Nuswantoro, Semarang, Indonesia
+GitHub: [@eevernexx](https://github.com/eevernexx)

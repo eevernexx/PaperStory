@@ -91,7 +91,7 @@ export default function Showcase() {
       id="showcase"
       className="py-[120px] px-10 border-b-3 border-ink relative bg-paper max-md:px-5"
     >
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <Reveal>
           <div className="inline-flex items-center gap-2.5 font-display text-[13px] tracking-widest uppercase px-4 py-[7px] bg-ink text-paper rounded-full mb-6">
             ◆ See it in action
@@ -104,7 +104,7 @@ export default function Showcase() {
             </span>
           </h2>
           <p className="max-w-[640px] mt-6 text-[17px] leading-[1.6] text-[#333]">
-            Each paper rebuilt as a scrolling, animated narrative — research
+            Each paper rebuilt as a scrolling, animated narrative - research
             you can read instead of survive.
           </p>
         </Reveal>

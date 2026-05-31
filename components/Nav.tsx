@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 export default function Nav() {
   return (
@@ -13,7 +14,8 @@ export default function Nav() {
         PaperStory
       </Link>
 
-      <div className="flex gap-8 items-center max-md:hidden">
+      {/* Desktop / tablet */}
+      <div className="hidden md:flex gap-8 items-center">
         <a href="#features" className="nav-link">
           Features
         </a>
@@ -24,6 +26,9 @@ export default function Nav() {
           Browse Stories →
         </Link>
       </div>
+
+      {/* Mobile */}
+      <MobileMenu />
 
       <style jsx>{`
         .nav-link {

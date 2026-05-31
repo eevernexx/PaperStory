@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 
 const CARDS = [
-  { label: "Channel", stat: "WhatsApp" },
-  { label: "Backend", stat: "Laravel + Node" },
-  { label: "Admin app", stat: "Flutter" },
-  { label: "Database", stat: "MySQL" },
-  { label: "Tests", stat: "Black + White Box" },
-  { label: "Journal", stat: "JAMASTIKA · 2023" },
+  { label: "Networks", stat: "2 FFNNs" },
+  { label: "Architecture", stat: "3 x 64 hidden" },
+  { label: "Pit-stop F1", stat: "≈ 0.35" },
+  { label: "Compound acc.", stat: "≈ 0.75" },
+  { label: "Data", stat: "6 seasons · 2014-2019" },
+  { label: "Journal", stat: "Appl. Sci. 2020" },
 ];
 
-export default function ChatbotConclusionScene({ active }: { active: boolean }) {
+export default function NeuralConclusionScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-start p-10 px-9 pt-12 bg-pink overflow-y-auto">
       <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-[#666]">
@@ -32,7 +32,7 @@ export default function ChatbotConclusionScene({ active }: { active: boolean }) 
             <div className="font-mono text-[11px] text-[#555] uppercase tracking-wider">
               {c.label}
             </div>
-            <div className="font-display text-[20px]">{c.stat}</div>
+            <div className="font-display text-[18px]">{c.stat}</div>
           </motion.div>
         ))}
       </div>

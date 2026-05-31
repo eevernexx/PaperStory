@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { showcase } from "@/lib/scenes";
 import { f1Story } from "@/lib/f1-story";
 import { coffeeStory } from "@/lib/coffee-story";
-import { chatbotStory } from "@/lib/chatbot-story";
+import { neuralStory } from "@/lib/neural-story";
 import { arStory } from "@/lib/ar-story";
 import { designStory } from "@/lib/design-story";
 import { legalStory } from "@/lib/legal-story";
@@ -10,16 +10,16 @@ import StoryClient from "@/components/StoryClient";
 
 const STORIES = {
   f1: {
-    title: "F1 Lap Time Prediction · A PaperStory",
+    title: "F1 · Programmable FHE Accelerator · A PaperStory",
     sections: f1Story,
   },
   coffee: {
     title: "Coffee Bean Classification · A PaperStory",
     sections: coffeeStory,
   },
-  chatbot: {
-    title: "Warung Chatbot · A PaperStory",
-    sections: chatbotStory,
+  neural: {
+    title: "Virtual Strategy Engineer · A PaperStory",
+    sections: neuralStory,
   },
   ar: {
     title: "AR Bangun Ruang · A PaperStory",
@@ -44,23 +44,25 @@ export function generateStaticParams(): Params[] {
 }
 
 export function generateMetadata({ params }: { params: Params }) {
-  const card = showcase.find((s) => s.slug === params.slug);
-  if (!card) return { title: "PaperStory" };
+  const c = showcase.find((s) => s.slug === params.slug);
+  if (!c) return { title: "PaperStory" };
   return {
-    title: `${card.title} — PaperStory`,
-    description: card.blurb,
+    title: `${c.title} - PaperStory`,
+    description: c.blurb,
   };
 }
 
 export default function StoryPage({ params }: { params: Params }) {
   const story = STORIES[params.slug as keyof typeof STORIES];
-  if (!story) notFound();
+  const card = showcase.find((s) => s.slug === params.slug);
+  if (!story || !card) notFound();
 
   return (
     <StoryClient
       title={story.title}
       slug={params.slug}
       sections={story.sections}
+      paperUrl={card.paperUrl}
     />
   );
 }

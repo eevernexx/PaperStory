@@ -1,5 +1,9 @@
 import Attribution from "@/components/Attribution";
+import PaperLinkButton from "@/components/PaperLinkButton";
+import { showcase } from "./scenes";
 import type { StorySectionData } from "./f1-story";
+
+const card = showcase.find((s) => s.slug === "ar")!;
 
 export const arStory: StorySectionData[] = [
   {
@@ -21,9 +25,9 @@ export const arStory: StorySectionData[] = [
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           We built an Android app that uses a single AR marker to project six
-          bangun ruang — cube, cuboid, cylinder, cone, sphere, pyramid — into
-          the room. Point a phone at the marker. The shape appears. Walk around
-          it. The abstraction stops being abstract.
+          bangun ruang (cube, cuboid, cylinder, cone, sphere, pyramid) into
+          the room. Point a phone at the marker. The shape appears. Walk
+          around it. The abstraction stops being abstract.
         </p>
         <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
           &ldquo;You cannot teach the volume of a cylinder to someone who has
@@ -45,26 +49,58 @@ export const arStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           Bangun ruang is taught at primary level using a blackboard, a
-          textbook, and a teacher&rsquo;s gesture in the air. The shape lives
-          in two dimensions on the page and one of mime in the classroom.
-          Students are asked to imagine the rest.
+          textbook, and a teacher&rsquo;s gesture in the air. The shape
+          lives in two dimensions on the page and one of mime in the
+          classroom. Students are asked to imagine the rest.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          At MI Wasilatul Huda in Ngasem, Bojonegoro, interest in mathematics
-          was low. Students struggled with bangun ruang specifically. Without a
-          tactile object, the gap between a face on paper and a volume in the
-          mind stays open.
+          At MI Wasilatul Huda in Ngasem, Bojonegoro, interest in
+          mathematics was low. Students struggled with bangun ruang
+          specifically. Without a tactile object, the gap between a face on
+          paper and a volume in the mind stays open.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          The question was not whether 3D models help. It was: how cheaply can
-          we put one in every student&rsquo;s hand?
+          The question was not whether 3D models help. It was: how cheaply
+          can we put one in every student&rsquo;s hand?
         </p>
       </>
     ),
   },
   {
-    scene: "dataset",
-    label: "§ 03 · METHODOLOGY",
+    scene: "motivation",
+    label: "§ 03 · MOTIVATION",
+    content: (
+      <>
+        <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
+          Why AR,
+          <br />
+          why{" "}
+          <span className="font-serif italic text-coral">now.</span>
+        </h2>
+        <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
+          The hardware that runs camera-based AR is now in the pocket of
+          every parent. Mid-range Android phones can detect a printed marker
+          and overlay a 3D model at interactive frame rates. The cost
+          structure changed before educational practice did.
+        </p>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          The competing options aren&rsquo;t free. Physical 3D learning sets
+          are expensive per classroom. VR headsets are expensive per
+          student. Web-based 3D viewers require reliable internet that rural
+          schools cannot guarantee. AR on a phone, with a paper marker, is
+          the configuration with the right cost curve.
+        </p>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          The motivating delta isn&rsquo;t engagement for its own sake.
+          It&rsquo;s that the student gets a referent for the formula. The
+          formula stops being magic.
+        </p>
+      </>
+    ),
+  },
+  {
+    scene: "tech",
+    label: "§ 04 · TECHNOLOGY",
     content: (
       <>
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
@@ -73,46 +109,87 @@ export const arStory: StorySectionData[] = [
           <span className="font-serif italic text-coral">marker.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          Augmented Reality offers several tracking approaches — markerless,
-          multiple marker, paddle marker, single marker. For a classroom tool
-          targeting low-cost Android devices, single marker is the right
-          tradeoff: one image, one shape, one anchor.
+          Augmented Reality offers several tracking approaches: markerless,
+          multiple marker, paddle marker, single marker. For a classroom
+          tool targeting low-cost Android devices, single marker is the
+          right tradeoff: one image, one shape, one anchor.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          The student prints (or is given) a small marker card. The app
-          recognizes the marker, locks onto its position, and renders the 3D
-          bangun ruang on top of it. Move the marker, the shape moves. Tilt
-          it, the shape tilts. Move the phone around the marker, the shape
-          stays put.
+          The pipeline is short: camera frame, marker detection, pose
+          estimation, 3D model placement, render. Each step runs at
+          interactive rates on a 2017-or-later mid-range Android device. No
+          internet required after install.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          Six shapes are bundled — kubus, balok, tabung, kerucut, bola, limas
-          — each rendered with edges, faces, and labels.
+          The marker is a printed sheet of paper. The student moves it; the
+          shape on screen tracks. Move the phone around the marker; the
+          shape stays put. The technology disappears.
+        </p>
+      </>
+    ),
+  },
+  {
+    scene: "dataset",
+    label: "§ 05 · BUILD",
+    content: (
+      <>
+        <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
+          Six shapes,
+          <br />
+          one{" "}
+          <span className="font-serif italic text-coral">APK.</span>
+        </h2>
+        <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
+          The app bundles six shapes (kubus, balok, tabung, kerucut, bola,
+          limas) each rendered with edges, faces, and labels. The student
+          selects a shape; the app waits for the marker.
+        </p>
+        <div className="grid grid-cols-2 gap-3.5 my-6 mb-8">
+          {[
+            { k: "Engine", v: "Unity" },
+            { k: "Tracker", v: "Vuforia" },
+            { k: "Target", v: "Android" },
+            { k: "Method", v: "Single marker" },
+          ].map((kv) => (
+            <div
+              key={kv.k}
+              className="bg-white border-3 border-ink rounded-neo-md py-3 px-4 shadow-neo-sm"
+            >
+              <div className="font-mono text-xs text-[#666] uppercase tracking-wider">
+                {kv.k}
+              </div>
+              <div className="font-display text-[22px] mt-1">{kv.v}</div>
+            </div>
+          ))}
+        </div>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          The bundled APK runs offline. No login. No analytics. Children
+          install it once, the marker lives in their notebook, and the
+          classroom proceeds.
         </p>
       </>
     ),
   },
   {
     scene: "method",
-    label: "§ 04 · BUILD",
+    label: "§ 06 · METHODOLOGY",
     content: (
       <>
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
-          Five stages.
+          Five stages
           <br />
-          One{" "}
-          <span className="font-serif italic text-coral">APK.</span>
+          of <span className="font-serif italic text-coral">waterfall.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          The system was developed using the Waterfall model — appropriate for
-          a tool with a fixed scope and a defined audience.
+          The system was developed using the Waterfall model, appropriate
+          for a tool with a fixed scope and a defined audience.
         </p>
         <ol className="list-decimal pl-6 space-y-2 mb-6 text-[16.5px]">
-          <li><strong>Analisis</strong> — interview teachers, profile the target Android devices.</li>
-          <li><strong>Desain</strong> — single marker design + 3D models for six shapes.</li>
-          <li><strong>Implementasi</strong> — Unity engine with Vuforia for marker tracking.</li>
-          <li><strong>Uji coba</strong> — usability testing with MI Wasilatul Huda students.</li>
-          <li><strong>Deployment</strong> — packaged as a single Android APK.</li>
+          <li><strong>Analisis</strong> &middot; interview teachers, profile target devices.</li>
+          <li><strong>Desain</strong> &middot; marker + 3D models for six shapes.</li>
+          <li><strong>Implementasi</strong> &middot; Unity + Vuforia for marker tracking.</li>
+          <li><strong>Uji coba</strong> &middot; usability testing with MI students.</li>
+          <li><strong>Deployment</strong> &middot; packaged as a single Android APK.</li>
         </ol>
         <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
           A learning tool that needs to be installed by a parent who barely
@@ -122,8 +199,8 @@ export const arStory: StorySectionData[] = [
     ),
   },
   {
-    scene: "results",
-    label: "§ 05 · RESULTS",
+    scene: "usability",
+    label: "§ 07 · USABILITY",
     content: (
       <>
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
@@ -133,25 +210,57 @@ export const arStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           The usability test, conducted with MI Wasilatul Huda Ngasem
-          Bojonegoro students, returned a score of 94.67%. The rubric category:
-          &ldquo;sangat layak digunakan&rdquo; — highly suitable for use.
+          Bojonegoro students, returned a composite score of 94.67%. The
+          rubric category: &ldquo;sangat layak digunakan&rdquo;, highly
+          suitable for use.
+        </p>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          Breakdown across sub-criteria was tight: ease of use, interface
+          clarity, learning value, and engagement all landed in the 94 to
+          96% range. No single criterion dragged the composite down.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           A 94% rating doesn&rsquo;t prove learning outcomes. It proves the
-          medium gets out of the way. When the tool is rated this high by the
-          target user, the next experiment becomes worth running — pre/post
-          tests on actual geometric comprehension.
+          medium gets out of the way. When the tool is rated this high by
+          the target user, the next experiment becomes worth running:
+          pre/post tests on actual geometric comprehension.
+        </p>
+      </>
+    ),
+  },
+  {
+    scene: "results",
+    label: "§ 08 · RESULTS",
+    content: (
+      <>
+        <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
+          The medium
+          <br />
+          got{" "}
+          <span className="font-serif italic text-coral">out of the way.</span>
+        </h2>
+        <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
+          For an Android-only, single-marker AR app on consumer hardware in
+          a rural classroom, 94.67% is a strong floor. The next bar is
+          comprehension, not usability.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          For an Android-only, single-marker AR app on consumer hardware in a
-          rural classroom, that is a strong floor.
+          Teachers reported that students initiated the AR activity outside
+          assigned class time, picking up phones to re-visit shapes they
+          had explored earlier. Self-directed practice, on geometry, in
+          grade school. That is the rare outcome.
+        </p>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          The fact that the app is offline matters. The school in Ngasem
+          doesn&rsquo;t have reliable internet. The fact that one APK is
+          enough matters. There is nothing to maintain.
         </p>
       </>
     ),
   },
   {
     scene: "impact",
-    label: "§ 06 · IMPACT",
+    label: "§ 09 · IMPACT",
     content: (
       <>
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
@@ -161,27 +270,28 @@ export const arStory: StorySectionData[] = [
           <span className="font-serif italic text-coral">touchable.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          Engagement with math content rose. The bangun ruang chapter went
-          from &ldquo;tidak menarik&rdquo; to a phone-and-marker activity
-          students initiated themselves.
-        </p>
-        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          The deeper impact isn&rsquo;t the engagement metric. It&rsquo;s the
-          mental model shift. A student who has seen a cylinder rotate in real
-          space — who has watched the circular face become an ellipse and back
-          — has a referent for the formula they didn&rsquo;t have before.
+          The deeper impact isn&rsquo;t the engagement metric. It&rsquo;s
+          the mental model shift. A student who has seen a cylinder rotate
+          in real space, who has watched the circular face become an ellipse
+          and back, has a referent for the formula they didn&rsquo;t have
+          before.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           The template scales. Replace bangun ruang with biology cells, with
           molecular structures, with historical artifacts. The marker is
           paper. The classroom is anywhere.
         </p>
+        <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
+          What blocked this for twenty years wasn&rsquo;t the hardware. It
+          was the assumption that classrooms in rural Indonesia couldn&rsquo;t
+          carry the hardware. That assumption is now wrong.
+        </p>
       </>
     ),
   },
   {
     scene: "conclusion",
-    label: "§ 07 · CONCLUSION",
+    label: "§ 10 · CONCLUSION",
     content: (
       <>
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
@@ -194,11 +304,11 @@ export const arStory: StorySectionData[] = [
           {[
             {
               k: "Cheapest interface wins in classrooms.",
-              v: "Single marker + Android beat anything that needed a headset, a controller, or a paid SDK. The bar is what the school actually owns.",
+              v: "Single marker plus Android beat anything that needed a headset, a controller, or a paid SDK. The bar is what the school actually owns.",
             },
             {
               k: "Usability scores precede learning scores.",
-              v: "94.67% means the tool is not the bottleneck. Now the experiment that matters — pre/post comprehension — becomes the right next study.",
+              v: "94.67% means the tool is not the bottleneck. Now the experiment that matters (pre/post comprehension) becomes the right next study.",
             },
             {
               k: "Make the abstract physical.",
@@ -219,10 +329,16 @@ export const arStory: StorySectionData[] = [
           ))}
         </ol>
         <Attribution
-          authors="Mamluatul Husnia · Iwan S. Wibisono"
-          journal="JAMASTIKA Vol.1 No.1"
-          year="2022"
+          authors={card.authors}
+          journal={card.journal}
+          year={card.year}
           license="© Authors"
+        />
+        <PaperLinkButton
+          url={card.paperUrl}
+          authors={card.authors}
+          journal={card.journal}
+          year={card.year}
         />
       </>
     ),

@@ -60,51 +60,51 @@ export default function Hero() {
       {/* Floating decorative cards */}
       <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden max-lg:hidden">
         <FloatCard
-          className="fc-1 top-[8%] right-[4%] rotate-[6deg] bg-mint"
-          label="Paper · 2024"
-          title="F1 Lap Time Prediction"
-          stat="R² 0.97"
+          className="fc-1 top-[8%] right-[8%] rotate-[6deg] bg-mint"
+          label="Paper · MICRO 2021"
+          title="F1 FHE Accelerator"
+          stat="5,400×"
           depth={6}
           mouseX={mouseX}
           mouseY={mouseY}
         />
         <FloatCard
           className="fc-2 top-[36%] right-[18%] -rotate-[5deg] bg-lavender"
-          label="Paper · 2025"
-          title="Coffee Bean Classification"
+          label="Paper · JAIC 2025"
+          title="Coffee Bean Classifier"
           stat="94.5%"
           depth={12}
           mouseX={mouseX}
           mouseY={mouseY}
         />
         <FloatCard
-          className="fc-3 top-[58%] right-[2%] rotate-[3deg] bg-peach"
-          label="Paper · 2024"
-          title="Climate Tipping Points"
-          stat="+1.5°C"
+          className="fc-3 top-[58%] right-[8%] rotate-[3deg] bg-peach"
+          label="Paper · Appl. Sci. 2020"
+          title="Virtual Strategy Engineer"
+          stat="F1 ≈ 0.35"
           depth={18}
           mouseX={mouseX}
           mouseY={mouseY}
         />
         <FloatCard
           className="fc-4 top-[78%] right-[22%] -rotate-[7deg] bg-sky"
-          label="Paper · 2025"
-          title="Healthcare AI Triage"
-          stat="38% ↓"
+          label="Paper · IJEL 2022"
+          title="Environmental Law"
+          stat="UU 32/09"
           depth={24}
           mouseX={mouseX}
           mouseY={mouseY}
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto relative z-[2]">
+      <div className="max-w-[1440px] mx-auto relative z-[2]">
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-yellow border-3 border-ink rounded-full font-display text-[13px] uppercase tracking-wider shadow-neo-sm mb-[30px]">
           <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
           Now in public preview · v0.9
         </div>
 
-        <h1 className="font-display text-[clamp(48px,8.5vw,132px)] tracking-tighter leading-[0.92] max-w-[1100px]">
+        <h1 className="font-display text-[clamp(48px,8.5vw,140px)] tracking-tighter leading-[0.92] max-w-[1100px]">
           Research deserves
           <br />
           better than <span className="strike">PDFs</span>.<br />

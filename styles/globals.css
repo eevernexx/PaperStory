@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================================
-   PAPERSTORY — GLOBALS
+   PAPERSTORY - GLOBALS
    ============================================================ */
 
 @layer base {
@@ -103,6 +103,12 @@
   /* Pill */
   .pill {
     @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 font-display text-xs uppercase tracking-wider border-2 border-ink rounded-full bg-white;
+  }
+
+  /* Story grid never breaks on ultrawide */
+  .story-grid-max {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 

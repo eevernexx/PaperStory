@@ -2,9 +2,49 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "PaperStory — Research deserves better than PDFs.",
+  metadataBase: new URL("https://paperstory.vercel.app"),
+  title: "PaperStory - Research deserves better than PDFs.",
   description:
-    "Transform academic papers into interactive stories with animations, visualizations, illustrations, and immersive scrollytelling.",
+    "Academic papers transformed into interactive scrollytelling experiences. Six published research papers, reimagined as visual narratives.",
+  keywords: [
+    "research",
+    "academic papers",
+    "scrollytelling",
+    "data visualization",
+    "interactive",
+  ],
+  authors: [
+    { name: "Aryasatya Muhammad Aqsel", url: "https://github.com/eevernexx" },
+  ],
+  creator: "Aryasatya Muhammad Aqsel",
+  openGraph: {
+    title: "PaperStory - Research deserves better than PDFs.",
+    description:
+      "Academic papers transformed into interactive scrollytelling experiences.",
+    url: "https://paperstory.vercel.app",
+    siteName: "PaperStory",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "PaperStory - Research deserves better than PDFs.",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PaperStory - Research deserves better than PDFs.",
+    description:
+      "Academic papers transformed into interactive scrollytelling experiences.",
+    images: ["/og-image.svg"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

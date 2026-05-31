@@ -11,10 +11,12 @@ type Props = {
   title: string;
   slug: string;
   sections: StorySectionData[];
+  paperUrl?: string;
 };
 
-export default function StoryClient({ title, slug, sections }: Props) {
-  const [activeScene, setActiveScene] = useState<SceneId>("intro");
+export default function StoryClient({ title, slug, sections, paperUrl }: Props) {
+  const initialScene: SceneId = sections[0]?.scene ?? "intro";
+  const [activeScene, setActiveScene] = useState<SceneId>(initialScene);
   const [activeIdx, setActiveIdx] = useState(1);
 
   const handleActivate = useCallback((scene: SceneId, idx: number) => {
@@ -28,14 +30,15 @@ export default function StoryClient({ title, slug, sections }: Props) {
         title={title}
         currentIdx={activeIdx}
         totalSections={sections.length}
+        paperUrl={paperUrl}
       />
 
-      <div className="grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1">
+      <div className="story-grid-max grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1">
         {/* LEFT: scrolling content */}
-        <div className="py-20 px-[60px] pb-[200px] max-w-[720px] ml-auto mr-10 max-[1100px]:py-[60px] max-[1100px]:px-[30px] max-[1100px]:pb-[100px] max-[1100px]:mx-auto">
+        <div className="py-20 px-[60px] pb-[200px] max-w-[680px] xl:max-w-[720px] 2xl:max-w-[760px] ml-auto mr-10 max-[1100px]:py-[60px] max-[1100px]:px-[30px] max-[1100px]:pb-[100px] max-[1100px]:mx-auto">
           {sections.map((s, i) => (
             <StorySection
-              key={s.scene}
+              key={`${s.scene}-${i}`}
               scene={s.scene}
               idx={i + 1}
               onActivate={handleActivate}
