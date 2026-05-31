@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const NODES = [
-  { num: "1", label: "Pre-process · filter & encode" },
+  { num: "1", label: "Pre-process Â· filter & encode" },
   { num: "2", label: "10-fold stratified CV" },
   { num: "3", label: "Train pit-stop FFNN" },
   { num: "4", label: "Train compound FFNN" },
@@ -12,9 +12,9 @@ const NODES = [
 
 export default function NeuralMethodScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-start justify-center p-5 sm:p-[40px] px-10 bg-sky overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-start justify-center max-[1100px]:justify-start p-4 sm:p-[40px] px-4 sm:px-10 bg-sky overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · METHODOLOGY
+        <span className="text-ink font-bold">SCENE</span> Â· METHODOLOGY
       </span>
       <div className="font-display text-[18px] mb-5 self-start mt-6">
         Two networks, one pipeline

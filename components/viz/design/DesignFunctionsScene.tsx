@@ -1,18 +1,18 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const ROLES = [
-  { num: "I", label: "Identifikasi", desc: "Mark identity · brand · origin" },
-  { num: "II", label: "Informasi", desc: "Instruct · explain · direct" },
-  { num: "III", label: "Promosi", desc: "Persuade · sell · present" },
+  { num: "I", label: "Identifikasi", desc: "Mark identity Â· brand Â· origin" },
+  { num: "II", label: "Informasi", desc: "Instruct Â· explain Â· direct" },
+  { num: "III", label: "Promosi", desc: "Persuade Â· sell Â· present" },
 ];
 
 export default function DesignFunctionsScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-coral">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-coral overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-white/70">
-        <span className="text-white font-bold">SCENE</span> · FUNCTIONS
+        <span className="text-white font-bold">SCENE</span> Â· FUNCTIONS
       </span>
       <div className="font-display text-[20px] mb-5 mt-6 px-2 text-paper">
         Three functions of design

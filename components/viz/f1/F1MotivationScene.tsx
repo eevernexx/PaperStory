@@ -10,7 +10,7 @@ const ROWS = [
 
 export default function F1MotivationScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-peach">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-peach overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
         <span className="text-ink font-bold">SCENE</span> · MOTIVATION
       </span>

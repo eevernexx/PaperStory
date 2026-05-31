@@ -1,21 +1,21 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const CARDS = [
   { label: "Networks", stat: "2 FFNNs" },
   { label: "Architecture", stat: "3 x 64 hidden" },
-  { label: "Pit-stop F1", stat: "≈ 0.35" },
-  { label: "Compound acc.", stat: "≈ 0.75" },
-  { label: "Data", stat: "6 seasons · 2014-2019" },
+  { label: "Pit-stop F1", stat: "â‰ˆ 0.35" },
+  { label: "Compound acc.", stat: "â‰ˆ 0.75" },
+  { label: "Data", stat: "6 seasons Â· 2014-2019" },
   { label: "Journal", stat: "Appl. Sci. 2020" },
 ];
 
 export default function NeuralConclusionScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-start justify-start p-5 sm:p-10 px-9 pt-12 bg-pink overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-start justify-start p-4 sm:p-10 px-5 sm:px-9 pt-8 sm:pt-12 bg-pink overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · CONCLUSION
+        <span className="text-ink font-bold">SCENE</span> Â· CONCLUSION
       </span>
       <div className="font-display text-[22px] mb-4 self-start mt-4">
         Final scorecard

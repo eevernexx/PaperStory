@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -7,15 +7,15 @@ const STAGES = [
   { era: "3500 BCE", what: "Cuneiform" },
   { era: "1450", what: "Printing press" },
   { era: "1920s", what: "Modernism" },
-  { era: "1990s", what: "Digital · web" },
+  { era: "1990s", what: "Digital Â· web" },
   { era: "Today", what: "Brand systems" },
 ];
 
 export default function DesignProblemScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-lavender overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-lavender overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · EVOLUTION
+        <span className="text-ink font-bold">SCENE</span> Â· EVOLUTION
       </span>
       <div className="font-display text-[20px] mb-5 mt-8 px-2">
         Visual communication, through time

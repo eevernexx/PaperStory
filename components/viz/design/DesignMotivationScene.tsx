@@ -1,20 +1,20 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const STAGES = [
-  { era: "30 K BCE", what: "Cave painting · marking presence" },
-  { era: "3500 BCE", what: "Cuneiform · marking transactions" },
-  { era: "1450", what: "Printing press · scale" },
-  { era: "1920s", what: "Bauhaus · principles" },
-  { era: "1990s", what: "Digital · ubiquity" },
+  { era: "30 K BCE", what: "Cave painting Â· marking presence" },
+  { era: "3500 BCE", what: "Cuneiform Â· marking transactions" },
+  { era: "1450", what: "Printing press Â· scale" },
+  { era: "1920s", what: "Bauhaus Â· principles" },
+  { era: "1990s", what: "Digital Â· ubiquity" },
 ];
 
 export default function DesignMotivationScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-mint overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · MOTIVATION
+        <span className="text-ink font-bold">SCENE</span> Â· MOTIVATION
       </span>
       <div className="font-display text-[20px] mb-1 mt-6 px-2">
         From cave paintings to digital

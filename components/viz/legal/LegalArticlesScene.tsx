@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -19,15 +19,15 @@ const ARTICLES = [
 
 export default function LegalArticlesScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-peach overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-peach overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · ARTICLES
+        <span className="text-ink font-bold">SCENE</span> Â· ARTICLES
       </span>
       <div className="font-display text-[20px] mb-1 mt-6 px-2">
         Constitutional anchors
       </div>
       <div className="font-mono text-xs text-[#555] mb-5 px-2">
-        UUD 1945 · the three articles every environmental ruling cites
+        UUD 1945 Â· the three articles every environmental ruling cites
       </div>
       <div className="flex flex-col gap-2.5 px-2">
         {ARTICLES.map((a, i) => (

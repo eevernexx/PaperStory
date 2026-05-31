@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -14,12 +14,12 @@ const BENCH = [
 
 export default function F1BenchmarkScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-8 bg-lavender overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-8 bg-lavender overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · BENCHMARKS
+        <span className="text-ink font-bold">SCENE</span> Â· BENCHMARKS
       </span>
       <div className="font-display text-[18px] mb-1 px-2 mt-6">Execution time (ms)</div>
-      <div className="font-mono text-xs text-[#555] mb-4 px-2">CPU vs F1 · lower is better</div>
+      <div className="font-mono text-xs text-[#555] mb-4 px-2">CPU vs F1 Â· lower is better</div>
       <div className="px-2 grid grid-cols-[1fr_auto_auto] gap-x-3 gap-y-2 text-[11.5px] font-mono">
         <div className="font-display text-[11px] uppercase tracking-wider text-[#555]">Benchmark</div>
         <div className="font-display text-[11px] uppercase tracking-wider text-[#555] text-right">CPU</div>

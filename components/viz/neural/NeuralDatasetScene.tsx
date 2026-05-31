@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -6,15 +6,15 @@ const SEASONS = ["2014", "2015", "2016", "2017", "2018", "2019"];
 
 export default function NeuralDatasetScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-mint">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · DATASET
+        <span className="text-ink font-bold">SCENE</span> Â· DATASET
       </span>
       <div className="font-display text-[20px] mb-1 mt-6 px-2">
         Six seasons of F1 timing data
       </div>
       <div className="font-mono text-xs text-[#555] mb-5 px-2">
-        2014 to 2019 · dry races · 1 to 3 pit stops
+        2014 to 2019 Â· dry races Â· 1 to 3 pit stops
       </div>
       <div className="grid grid-cols-3 gap-3 px-2 mb-4">
         {SEASONS.map((y, i) => (

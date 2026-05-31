@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const CARDS = [
-  { label: "Functions", stat: "3 · ID · Info · Promo" },
-  { label: "Elements", stat: "Line · Type · Shape" },
-  { label: "Principles", stat: "Balance · Contrast" },
+  { label: "Functions", stat: "3 Â· ID Â· Info Â· Promo" },
+  { label: "Elements", stat: "Line Â· Type Â· Shape" },
+  { label: "Principles", stat: "Balance Â· Contrast" },
   { label: "Author", stat: "R. Kuncoro W. Dewojati" },
   { label: "Institution", stat: "UNY" },
   { label: "Domain", stat: "Advertising design" },
@@ -13,9 +13,9 @@ const CARDS = [
 
 export default function DesignConclusionScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-start justify-start p-5 sm:p-10 px-9 pt-12 bg-pink overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-start justify-start p-4 sm:p-10 px-5 sm:px-9 pt-8 sm:pt-12 bg-pink overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · CONCLUSION
+        <span className="text-ink font-bold">SCENE</span> Â· CONCLUSION
       </span>
       <div className="font-display text-[22px] mb-4 self-start mt-4">
         Key takeaways

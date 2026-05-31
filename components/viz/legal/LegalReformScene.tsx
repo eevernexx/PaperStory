@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const REFORMS = [
-  "Paradigm: economic → eco-socio-cultural",
+  "Paradigm: economic â†’ eco-socio-cultural",
   "Harmonize sectoral with environmental law",
   "Strengthen administrative + criminal enforcement",
   "Community-based forest management",
@@ -13,9 +13,9 @@ const REFORMS = [
 
 export default function LegalReformScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-coral overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-coral overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-white/70">
-        <span className="text-white font-bold">SCENE</span> · REFORM
+        <span className="text-white font-bold">SCENE</span> Â· REFORM
       </span>
       <div className="font-display text-[20px] mb-1 mt-6 px-2 text-paper">
         ICEL six-point framework

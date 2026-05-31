@@ -1,21 +1,21 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const WORKLOADS = [
-  { name: "LoLa-CIFAR", note: "deep learning · CIFAR-10" },
-  { name: "LoLa-MNIST", note: "deep learning · MNIST" },
+  { name: "LoLa-CIFAR", note: "deep learning Â· CIFAR-10" },
+  { name: "LoLa-MNIST", note: "deep learning Â· MNIST" },
   { name: "Logistic Reg.", note: "private ML training" },
   { name: "DB Lookup", note: "private query" },
-  { name: "BGV Bootstrap", note: "noise refresh · BGV" },
-  { name: "CKKS Bootstrap", note: "noise refresh · CKKS" },
+  { name: "BGV Bootstrap", note: "noise refresh Â· BGV" },
+  { name: "CKKS Bootstrap", note: "noise refresh Â· CKKS" },
 ];
 
 export default function F1DatasetScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-mint overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · WORKLOADS
+        <span className="text-ink font-bold">SCENE</span> Â· WORKLOADS
       </span>
       <div className="font-display text-[18px] mb-1 mt-6 px-2">
         Seven full FHE programs

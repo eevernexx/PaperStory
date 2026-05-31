@@ -1,12 +1,12 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 export default function ArProblemScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-lavender">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-lavender overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · THE PROBLEM
+        <span className="text-ink font-bold">SCENE</span> Â· THE PROBLEM
       </span>
       <div className="font-display text-[22px] mb-5 self-start mt-8 px-2">
         Conventional vs. AR
@@ -23,10 +23,10 @@ export default function ArProblemScene({ active }: { active: boolean }) {
           </div>
           <div className="font-display text-[20px] mb-3">Buku &amp; papan tulis</div>
           <ul className="text-[13px] font-mono leading-7 text-[#444]">
-            <li>· 2D illustration</li>
-            <li>· Static</li>
-            <li>· Guess the depth</li>
-            <li>· Memorize formulas</li>
+            <li>Â· 2D illustration</li>
+            <li>Â· Static</li>
+            <li>Â· Guess the depth</li>
+            <li>Â· Memorize formulas</li>
           </ul>
         </motion.div>
         <motion.div
@@ -36,14 +36,14 @@ export default function ArProblemScene({ active }: { active: boolean }) {
           className="bg-coral border-3 border-ink rounded-neo-md p-5 shadow-neo-sm"
         >
           <div className="font-mono text-[11px] uppercase tracking-wider text-ink mb-2">
-            AR · Android
+            AR Â· Android
           </div>
           <div className="font-display text-[20px] mb-3">Single marker</div>
           <ul className="text-[13px] font-mono leading-7 text-ink">
-            <li>· 3D in real space</li>
-            <li>· Interactive</li>
-            <li>· See the volume</li>
-            <li>· Touch & rotate</li>
+            <li>Â· 3D in real space</li>
+            <li>Â· Interactive</li>
+            <li>Â· See the volume</li>
+            <li>Â· Touch & rotate</li>
           </ul>
         </motion.div>
       </div>

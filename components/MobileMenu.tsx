@@ -12,13 +12,19 @@ const LINKS = [
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
-  // Lock body scroll while menu is open
+  // Lock scroll on <html> (not body) while menu is open.
+  // Using body.overflow = "hidden" turns body into a scroll container,
+  // which silently breaks position:sticky on the nav (its sticky anchor
+  // shifts to body whose scroll offset is 0, so the nav flies off-screen).
+  // Locking the root element (html) instead prevents viewport scrolling
+  // while preserving the current scrollTop so the nav stays put.
   useEffect(() => {
     if (open) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
+      const el = document.documentElement;
+      const prev = el.style.overflow;
+      el.style.overflow = "hidden";
       return () => {
-        document.body.style.overflow = prev;
+        el.style.overflow = prev;
       };
     }
   }, [open]);

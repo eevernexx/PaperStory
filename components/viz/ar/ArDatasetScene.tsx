@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const SHAPES = [
-  { name: "Kubus", desc: "Cube · 6 faces" },
-  { name: "Balok", desc: "Cuboid · 6 faces" },
+  { name: "Kubus", desc: "Cube Â· 6 faces" },
+  { name: "Balok", desc: "Cuboid Â· 6 faces" },
   { name: "Tabung", desc: "Cylinder" },
   { name: "Kerucut", desc: "Cone" },
   { name: "Bola", desc: "Sphere" },
@@ -13,9 +13,9 @@ const SHAPES = [
 
 export default function ArDatasetScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-peach overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-peach overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> · SHAPES
+        <span className="text-ink font-bold">SCENE</span> Â· SHAPES
       </span>
       <div className="font-display text-[20px] mb-5 mt-8 px-2">
         Six bangun ruang in AR

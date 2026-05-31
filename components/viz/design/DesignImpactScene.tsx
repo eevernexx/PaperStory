@@ -1,19 +1,19 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
 const APPLICATIONS = [
   { name: "Logo", desc: "Visual mark of identity" },
-  { name: "Stationery", desc: "Letterhead · card · envelope" },
-  { name: "Signage", desc: "Wayfinding · storefront" },
-  { name: "Advertising", desc: "Print · digital · OOH" },
+  { name: "Stationery", desc: "Letterhead Â· card Â· envelope" },
+  { name: "Signage", desc: "Wayfinding Â· storefront" },
+  { name: "Advertising", desc: "Print Â· digital Â· OOH" },
 ];
 
 export default function DesignImpactScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-coral overflow-y-auto">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-coral overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-white/70">
-        <span className="text-white font-bold">SCENE</span> · APPLICATION
+        <span className="text-white font-bold">SCENE</span> Â· APPLICATION
       </span>
       <div className="font-display text-[22px] mb-5 mt-6 px-2">
         Where the principles ship
