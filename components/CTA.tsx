@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function CTA() {
   return (
-    <section className="py-[120px] px-10 border-b-3 border-ink relative bg-ink text-paper text-center max-md:px-5">
+    <section className="py-[72px] sm:py-[120px] px-5 sm:px-10 border-b-3 border-ink relative bg-ink text-paper text-center">
       <div className="max-w-[1280px] mx-auto">
         <Reveal>
           <h2 className="font-display text-[clamp(40px,5.5vw,84px)] mx-auto tracking-tighter leading-[0.95] text-paper">

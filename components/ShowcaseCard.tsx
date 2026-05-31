@@ -27,18 +27,18 @@ export default function ShowcaseCardComponent({ card, art, delay = 0 }: Props) {
         </span>
       )}
       <div
-        className={`h-[280px] border-b-3 border-ink relative overflow-hidden flex items-center justify-center ${card.bgColor}`}
+        className={`h-[220px] sm:h-[280px] border-b-3 border-ink relative overflow-hidden flex items-center justify-center ${card.bgColor}`}
       >
         {art}
       </div>
-      <div className="p-6 pb-7">
-        <div className="flex items-center gap-3 font-display text-[11px] tracking-wider uppercase text-[#555] mb-3">
+      <div className="p-5 pb-6 sm:p-6 sm:pb-7">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 font-display text-[10.5px] sm:text-[11px] tracking-wider uppercase text-[#555] mb-3">
           <span>{card.category}</span>
           <span className="w-1 h-1 bg-[#555] rounded-full" />
           <span>{card.readingTime}</span>
         </div>
-        <h3 className="text-[26px] leading-[1.05] font-display">{card.title}</h3>
-        <p className="mt-2.5 text-[#333] text-[14.5px]">{card.blurb}</p>
+        <h3 className="text-[22px] sm:text-[26px] leading-[1.1] sm:leading-[1.05] font-display">{card.title}</h3>
+        <p className="mt-2.5 text-[#333] text-[14px] sm:text-[14.5px]">{card.blurb}</p>
         <span className="mt-5 inline-flex items-center gap-2.5 font-display text-[13px] tracking-wider uppercase transition-all group-hover:gap-[18px]">
           Read the story →
         </span>

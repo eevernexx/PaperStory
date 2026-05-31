@@ -17,8 +17,8 @@ const MAX = 17412;
 
 export default function F1ResultsScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-8 bg-yellow overflow-y-auto">
-      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-[#666]">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-8 bg-yellow overflow-y-auto">
+      <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
         <span className="text-ink font-bold">SCENE</span> · RESULTS
       </span>
       <div className="px-2 mt-6">

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function F1ArchitectureScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-8 bg-sky">
-      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-[#666]">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-8 bg-sky">
+      <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
         <span className="text-ink font-bold">SCENE</span> · ARCHITECTURE
       </span>
       <div className="font-display text-[18px] mb-3 px-2 mt-6">

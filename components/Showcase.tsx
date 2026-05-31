@@ -111,7 +111,7 @@ export default function Showcase() {
   return (
     <section
       id="showcase"
-      className="py-[120px] px-10 border-b-3 border-ink relative bg-paper max-md:px-5"
+      className="py-[72px] sm:py-[120px] px-5 sm:px-10 border-b-3 border-ink relative bg-paper"
     >
       <div className="max-w-[1400px] mx-auto">
         <Reveal>
@@ -131,7 +131,7 @@ export default function Showcase() {
           </p>
         </Reveal>
 
-        <div className="mt-[70px] grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="mt-12 sm:mt-[70px] grid grid-cols-3 gap-5 sm:gap-7 max-lg:grid-cols-2 max-sm:grid-cols-1">
           {showcase.map((card, i) => (
             <ShowcaseCard
               key={card.slug}

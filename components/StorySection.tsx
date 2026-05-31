@@ -29,7 +29,7 @@ export default function StorySection({
     <article
       ref={ref}
       data-scene={scene}
-      className={`min-h-[95vh] pb-20 transition-opacity duration-500 ${
+      className={`min-h-[70vh] sm:min-h-[85vh] lg:min-h-[95vh] pb-14 sm:pb-20 transition-opacity duration-500 ${
         inView ? "opacity-100" : "opacity-30"
       }`}
     >

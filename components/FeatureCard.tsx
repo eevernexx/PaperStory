@@ -29,7 +29,7 @@ export default function FeatureCard({
       viewport={{ once: true, margin: "0px 0px -60px 0px" }}
       transition={{ duration: 0.7, delay, ease: [0.2, 0.8, 0.2, 1] }}
       whileHover={{ x: -4, y: -4, boxShadow: "10px 10px 0 #0A0A0A" }}
-      className={`bg-white border-3 border-ink rounded-neo-xl shadow-neo p-9 px-7 relative overflow-hidden min-h-[320px] md:min-h-[360px] xl:min-h-[380px] flex flex-col ${bgColor} ${spanCols}`}
+      className={`bg-white border-3 border-ink rounded-neo-xl shadow-neo p-6 sm:p-9 sm:px-7 relative overflow-hidden min-h-[260px] sm:min-h-[320px] md:min-h-[360px] xl:min-h-[380px] flex flex-col ${bgColor} ${spanCols}`}
     >
       <div className="font-display text-[14px] tracking-widest opacity-50 mb-4">
         {num}

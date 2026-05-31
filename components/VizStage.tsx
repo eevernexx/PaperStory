@@ -175,7 +175,7 @@ export default function VizStage({ active, slug }: Props) {
   };
 
   return (
-    <div className="viz-panel sticky top-[60px] h-[calc(100vh-60px)] py-[30px] pr-10 pl-0 border-l-3 border-ink max-[1100px]:relative max-[1100px]:h-[60vh] max-[1100px]:border-l-0 max-[1100px]:border-t-3 max-[1100px]:px-[30px]">
+    <div className="viz-panel sticky top-[60px] h-[calc(100vh-60px)] py-[30px] pr-10 pl-0 border-l-3 border-ink max-[1100px]:h-[45vh] max-[1100px]:min-h-[340px] max-[1100px]:max-h-[520px] max-[1100px]:border-l-0 max-[1100px]:border-b-3 max-[1100px]:px-4 sm:max-[1100px]:px-6 max-[1100px]:py-3 sm:max-[1100px]:py-4 max-[1100px]:bg-paper">
       <div className="w-full h-full bg-white border-3 border-ink rounded-neo-xl shadow-neo-lg relative overflow-hidden min-h-[480px] max-h-[900px]">
         <AnimatePresence mode="wait">
           <motion.div

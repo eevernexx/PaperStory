@@ -89,7 +89,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="py-[120px] px-10 border-b-3 border-ink relative bg-paper-2 max-md:px-5"
+      className="py-[72px] sm:py-[120px] px-5 sm:px-10 border-b-3 border-ink relative bg-paper-2"
     >
       <div className="max-w-[1400px] mx-auto">
         <Reveal>
@@ -106,7 +106,7 @@ export default function Features() {
           </h2>
         </Reveal>
 
-        <div className="mt-[70px] grid grid-cols-12 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="mt-10 sm:mt-[70px] grid grid-cols-12 gap-4 sm:gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
           {FEATURES.map((f, i) => (
             <FeatureCard
               key={f.num}

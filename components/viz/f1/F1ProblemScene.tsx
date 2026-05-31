@@ -18,8 +18,8 @@ export default function F1ProblemScene({ active }: { active: boolean }) {
   }, [active, value]);
 
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center p-10 bg-lavender">
-      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-[#666]">
+    <div className="absolute inset-0 flex flex-col items-center justify-center p-5 sm:p-10 bg-lavender">
+      <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
         <span className="text-ink font-bold">SCENE</span> · THE PROBLEM
       </span>
       <div className="font-mono text-[12px] uppercase tracking-wider text-[#555] mb-2">

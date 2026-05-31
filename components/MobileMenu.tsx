@@ -80,7 +80,7 @@ export default function MobileMenu() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -16, opacity: 0 }}
               transition={{ duration: 0.25, ease: [0.2, 0.8, 0.2, 1] }}
-              className="fixed top-[68px] left-0 right-0 z-[190] bg-paper border-b-3 border-ink shadow-neo-lg md:hidden"
+              className="fixed top-[60px] left-0 right-0 z-[190] bg-paper border-b-3 border-ink shadow-neo-lg md:hidden"
             >
               <nav className="px-5 py-6 flex flex-col gap-3">
                 {LINKS.map((l, i) => (

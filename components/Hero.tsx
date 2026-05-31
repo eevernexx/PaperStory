@@ -55,7 +55,7 @@ export default function Hero() {
     <section
       ref={heroRef}
       onMouseMove={handleMouseMove}
-      className="relative px-10 pt-[100px] pb-[140px] overflow-hidden border-b-3 border-ink"
+      className="relative px-5 sm:px-10 pt-[60px] pb-[80px] sm:pt-[100px] sm:pb-[140px] overflow-hidden border-b-3 border-ink"
     >
       {/* Floating decorative cards */}
       <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden max-lg:hidden">
@@ -99,12 +99,12 @@ export default function Hero() {
 
       <div className="max-w-[1440px] mx-auto relative z-[2]">
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-yellow border-3 border-ink rounded-full font-display text-[13px] uppercase tracking-wider shadow-neo-sm mb-[30px]">
+        <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-yellow border-3 border-ink rounded-full font-display text-[11px] sm:text-[13px] uppercase tracking-wider shadow-neo-sm mb-5 sm:mb-[30px]">
           <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
           Now in public preview · v0.9
         </div>
 
-        <h1 className="font-display text-[clamp(48px,8.5vw,140px)] tracking-tighter leading-[0.92] max-w-[1100px]">
+        <h1 className="font-display text-[clamp(40px,8.5vw,140px)] tracking-tighter leading-[0.92] max-w-[1100px]">
           Research deserves
           <br />
           better than <span className="strike">PDFs</span>.<br />
@@ -114,13 +114,13 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="max-w-[640px] text-[clamp(17px,1.4vw,21px)] leading-[1.5] mt-8 text-[#333]">
+        <p className="max-w-[640px] text-[clamp(15px,1.4vw,21px)] leading-[1.55] mt-6 sm:mt-8 text-[#333]">
           Transform academic papers into interactive narratives with animations,
           visualizations, illustrations, and immersive scrollytelling. Built for
           readers who want to <em>actually finish</em> the paper.
         </p>
 
-        <div className="flex gap-4 mt-10 flex-wrap">
+        <div className="flex gap-4 mt-7 sm:mt-10 flex-wrap">
           <Link href="/stories/f1" className="btn btn-primary">
             Explore Stories →
           </Link>

@@ -1,7 +1,7 @@
 export default function F1IntroScene() {
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center p-10 bg-coral text-paper">
-      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-paper/70">
+    <div className="absolute inset-0 flex flex-col items-center justify-center p-5 sm:p-10 bg-coral text-paper">
+      <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-paper/70">
         <span className="text-paper font-bold">SCENE</span> · INTRODUCTION
       </span>
       <svg viewBox="0 0 360 240" className="w-4/5 max-w-[420px]">

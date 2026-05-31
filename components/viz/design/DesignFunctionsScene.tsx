@@ -10,8 +10,8 @@ const ROLES = [
 
 export default function DesignFunctionsScene({ active }: { active: boolean }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-10 bg-coral">
-      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-white/70">
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-5 sm:p-10 bg-coral">
+      <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-white/70">
         <span className="text-white font-bold">SCENE</span> · FUNCTIONS
       </span>
       <div className="font-display text-[20px] mb-5 mt-6 px-2 text-paper">
