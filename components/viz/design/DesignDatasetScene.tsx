@@ -1,0 +1,41 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const ROLES = [
+  { num: "I", label: "Identifikasi", desc: "Mark identity · brand, origin" },
+  { num: "II", label: "Informasi", desc: "Instruct · explain · direct" },
+  { num: "III", label: "Promosi", desc: "Persuade · sell · present" },
+];
+
+export default function DesignDatasetScene({ active }: { active: boolean }) {
+  return (
+    <div className="absolute inset-0 flex flex-col items-stretch justify-center p-10 bg-mint">
+      <span className="absolute top-5 left-6 font-mono text-[11px] tracking-widest uppercase text-[#666]">
+        <span className="text-ink font-bold">SCENE</span> · CONCEPTS
+      </span>
+      <div className="font-display text-[20px] mb-5 mt-8 px-2">
+        Three functions of graphic design
+      </div>
+      <div className="flex flex-col gap-3 px-2">
+        {ROLES.map((r, i) => (
+          <motion.div
+            key={r.label}
+            initial={{ opacity: 0, y: 14 }}
+            animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
+            className="bg-white border-3 border-ink rounded-neo-md py-3.5 px-4 shadow-neo-sm flex items-center gap-4"
+          >
+            <div className="w-12 h-12 flex-shrink-0 bg-coral border-2 border-ink rounded-neo-md flex items-center justify-center font-display text-[16px]">
+              {r.num}
+            </div>
+            <div>
+              <div className="font-display text-[18px]">{r.label}</div>
+              <div className="font-mono text-[12px] text-[#555]">{r.desc}</div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}

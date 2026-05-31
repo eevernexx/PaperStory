@@ -1,34 +1,32 @@
 "use client";
 
+import Link from "next/link";
 import Reveal from "./Reveal";
-import { useUploadModal } from "@/lib/upload-modal";
 
 export default function CTA() {
-  const { setOpen } = useUploadModal();
-
   return (
     <section className="py-[120px] px-10 border-b-3 border-ink relative bg-ink text-paper text-center max-md:px-5">
       <div className="max-w-[1280px] mx-auto">
         <Reveal>
           <h2 className="font-display text-[clamp(40px,5.5vw,84px)] mx-auto tracking-tighter leading-[0.95] text-paper">
-            Stop writing papers
+            Six papers.
             <br />
-            nobody{" "}
+            Six{" "}
             <span className="font-serif italic font-bold text-yellow">
-              finishes.
+              stories.
             </span>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="max-w-[580px] mx-auto mt-7 mb-10 text-[18px] text-[#ddd]">
-            Drop in a PDF. PaperStory writes the story, designs the visuals,
-            and ships a shareable link in under five minutes.
+            Research transformed into interactive experiences. More stories
+            coming soon.
           </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <button onClick={() => setOpen(true)} className="btn btn-primary">
-            Upload your first paper →
-          </button>
+          <Link href="/stories/f1" className="btn btn-primary">
+            Read a Story →
+          </Link>
         </Reveal>
       </div>
     </section>

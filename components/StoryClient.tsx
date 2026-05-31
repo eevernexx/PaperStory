@@ -4,17 +4,16 @@ import { useCallback, useState } from "react";
 import StoryNav from "@/components/StoryNav";
 import StorySection from "@/components/StorySection";
 import VizStage from "@/components/VizStage";
-import UploadModal from "@/components/UploadModal";
-import { UploadModalProvider } from "@/lib/upload-modal";
 import type { SceneId } from "@/lib/scenes";
 import type { StorySectionData } from "@/lib/f1-story";
 
 type Props = {
   title: string;
+  slug: string;
   sections: StorySectionData[];
 };
 
-export default function StoryClient({ title, sections }: Props) {
+export default function StoryClient({ title, slug, sections }: Props) {
   const [activeScene, setActiveScene] = useState<SceneId>("intro");
   const [activeIdx, setActiveIdx] = useState(1);
 
@@ -24,7 +23,7 @@ export default function StoryClient({ title, sections }: Props) {
   }, []);
 
   return (
-    <UploadModalProvider>
+    <>
       <StoryNav
         title={title}
         currentIdx={activeIdx}
@@ -50,10 +49,8 @@ export default function StoryClient({ title, sections }: Props) {
         </div>
 
         {/* RIGHT: sticky viz */}
-        <VizStage active={activeScene} />
+        <VizStage active={activeScene} slug={slug} />
       </div>
-
-      <UploadModal />
-    </UploadModalProvider>
+    </>
   );
 }

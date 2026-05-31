@@ -43,47 +43,47 @@ export const showcase: ShowcaseCard[] = [
     blurb:
       "Four Indonesian coffee varieties, one CNN, 94.5% accuracy. Published in JAIC.",
     bgColor: "bg-mint",
-    available: false,
+    available: true,
   },
   {
-    slug: "climate",
-    category: "CLIMATE · POLICY",
+    slug: "legal",
+    category: "LAW · POLICY",
     readingTime: "11 min read",
-    title: "Climate Tipping Points: The 1.5°C Threshold",
+    title: "Indonesian Environmental Law: Discourse and Reform",
     blurb:
-      "What happens when feedback loops compound. A visual walk through the IPCC findings.",
+      "How UU 32/2009 tried to settle nature vs. economy — and where the political will to enforce it ran out.",
     bgColor: "bg-sky",
-    available: false,
+    available: true,
   },
   {
-    slug: "mushroom",
-    category: "BIOLOGY · CV",
-    readingTime: "8 min read",
-    title: "Mushroom Identification at Scale",
-    blurb:
-      "Edible or deadly? A vision model trained on 200K specimens learns the difference.",
-    bgColor: "bg-lavender",
-    available: false,
-  },
-  {
-    slug: "healthcare",
-    category: "HEALTHCARE · AI",
-    readingTime: "10 min read",
-    title: "AI Triage Cuts ER Wait Times by 38%",
-    blurb:
-      "A randomized study across six hospitals reveals what a transformer model gets right — and wrong.",
-    bgColor: "bg-yellow",
-    available: false,
-  },
-  {
-    slug: "bank",
-    category: "FINANCE · ML",
+    slug: "ar",
+    category: "EDUCATION · AR",
     readingTime: "6 min read",
-    title: "Bank Marketing Campaign: 45K Customers",
+    title: "AR Geometry for Elementary Classrooms",
     blurb:
-      "XGBoost predicts who will subscribe — ROC-AUC 0.92. Inside the feature importance.",
+      "Single-marker Android AR for bangun ruang, rated 94.67% usability by MI Wasilatul Huda students.",
+    bgColor: "bg-lavender",
+    available: true,
+  },
+  {
+    slug: "chatbot",
+    category: "FOOD · CHATBOT",
+    readingTime: "6 min read",
+    title: "A Warung Goes Online via WhatsApp",
+    blurb:
+      "Laravel + Node + WhatsApp turned a small warung into an aggregator-free online business, zero commission.",
     bgColor: "bg-peach",
-    available: false,
+    available: true,
+  },
+  {
+    slug: "design",
+    category: "DESIGN · THEORY",
+    readingTime: "7 min read",
+    title: "Graphic Design as the Medium of Advertising",
+    blurb:
+      "Three functions, four elements, five principles — the compact grammar of visual communication.",
+    bgColor: "bg-yellow",
+    available: true,
   },
 ];
 

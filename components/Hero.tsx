@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useUploadModal } from "@/lib/upload-modal";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 type FloatCardProps = {
   className: string;
@@ -41,7 +40,6 @@ function FloatCard({
 }
 
 export default function Hero() {
-  const { setOpen } = useUploadModal();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -126,9 +124,6 @@ export default function Hero() {
           <Link href="/stories/f1" className="btn btn-primary">
             Explore Stories →
           </Link>
-          <button onClick={() => setOpen(true)} className="btn">
-            Upload Research
-          </button>
         </div>
       </div>
     </section>

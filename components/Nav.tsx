@@ -1,11 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useUploadModal } from "@/lib/upload-modal";
 
 export default function Nav() {
-  const { setOpen } = useUploadModal();
-
   return (
     <nav className="sticky top-0 z-[100] flex items-center justify-between px-10 py-[18px] bg-paper border-b-3 border-ink backdrop-blur-sm max-md:px-5 max-md:py-3.5">
       <Link
@@ -23,15 +20,9 @@ export default function Nav() {
         <a href="#showcase" className="nav-link">
           Stories
         </a>
-        <button
-          onClick={() => setOpen(true)}
-          className="nav-link bg-transparent border-0 cursor-pointer font-sans text-[15px] font-medium"
-        >
-          Upload
-        </button>
-        <button onClick={() => setOpen(true)} className="btn btn-primary">
-          Get Started →
-        </button>
+        <Link href="/#showcase" className="btn btn-primary">
+          Browse Stories →
+        </Link>
       </div>
 
       <style jsx>{`
