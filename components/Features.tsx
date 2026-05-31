@@ -15,7 +15,7 @@ const FEATURES = [
     title: "Animated Visualizations",
     desc: "Static research figures transformed into animated charts, counters, scatter plots, and interactive data displays that make findings visceral.",
     bgColor: "bg-peach",
-    spanCols: "col-span-7 max-lg:col-span-2",
+    spanCols: "col-span-7 max-lg:col-span-2 max-sm:col-span-1",
     iconKey: "viz" as const,
   },
   {
@@ -51,7 +51,7 @@ const ICONS = {
       <rect x="20" y="20" width="14" height="14" fill="#FF6B6B" stroke="#0A0A0A" strokeWidth="3" />
       <circle cx="55" cy="27" r="9" fill="#B8F2C9" stroke="#0A0A0A" strokeWidth="3" />
       <polygon points="20,60 36,60 28,46" fill="#FFE066" stroke="#0A0A0A" strokeWidth="3" />
-      <text x="55" y="64" fontFamily="Archivo Black" fontSize="18" fill="#0A0A0A">Aa</text>
+      <text x="55" y="64" textAnchor="middle" fontFamily="Archivo Black" fontSize="18" fill="#0A0A0A">Aa</text>
     </svg>
   ),
   viz: (

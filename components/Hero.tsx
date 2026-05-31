@@ -98,12 +98,6 @@ export default function Hero() {
       </div>
 
       <div className="max-w-[1440px] mx-auto relative z-[2]">
-        {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-yellow border-3 border-ink rounded-full font-display text-[11px] sm:text-[13px] uppercase tracking-wider shadow-neo-sm mb-5 sm:mb-[30px]">
-          <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
-          Now in public preview · v0.9
-        </div>
-
         <h1 className="font-display text-[clamp(40px,8.5vw,140px)] tracking-tighter leading-[0.92] max-w-[1100px]">
           Research deserves
           <br />
