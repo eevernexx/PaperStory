@@ -28,7 +28,7 @@ export const coffeeStory: StorySectionData[] = [
           stages of training, and a hard look at where deep learning still
           gets the shape of a roasted bean wrong.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;Visual inspection by a trained roaster takes seconds. We built
           a model that does it in milliseconds, and asks it to be honest about
           the cases where it shouldn&rsquo;t.&rdquo;
@@ -167,7 +167,7 @@ export const coffeeStory: StorySectionData[] = [
           &ldquo;cat-ness&rdquo;. Training ran ~80 minutes on a single RTX
           3060.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           Pretrained models are not knowledge. They are priors. Fine-tuning
           is where you write the truth.
         </blockquote>

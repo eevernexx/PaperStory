@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://paperstory.vercel.app"),
   title: "PaperStory - Research deserves better than PDFs.",
   description:
-    "Academic papers transformed into interactive scrollytelling experiences. Six published research papers, reimagined as visual narratives.",
+    "Academic papers transformed into interactive scrollytelling experiences. Seven published research papers, reimagined as visual narratives.",
   keywords: [
     "research",
     "academic papers",

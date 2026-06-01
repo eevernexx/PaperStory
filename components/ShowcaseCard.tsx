@@ -21,11 +21,6 @@ export default function ShowcaseCardComponent({ card, art, delay = 0 }: Props) {
       whileHover={{ x: -4, y: -4, boxShadow: "10px 10px 0 #0A0A0A" }}
       className="bg-white border-3 border-ink rounded-neo-xl shadow-neo p-0 overflow-hidden cursor-pointer flex flex-col h-full group relative"
     >
-      {card.featured && (
-        <span className="absolute top-[18px] right-[18px] bg-ink text-paper font-display text-[10px] tracking-widest px-3 py-1.5 rounded-full z-[3]">
-          FEATURED STORY
-        </span>
-      )}
       <div
         className={`h-[220px] sm:h-[280px] border-b-3 border-ink relative overflow-hidden flex items-center justify-center ${card.bgColor}`}
       >
@@ -54,7 +49,7 @@ export default function ShowcaseCardComponent({ card, art, delay = 0 }: Props) {
     );
   }
 
-  // Fallback for not-yet-available stories. All six current stories are
+  // Fallback for not-yet-available stories. All seven current stories are
   // available, so this branch is informational only.
   return <div className="opacity-60 cursor-default">{inner}</div>;
 }

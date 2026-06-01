@@ -105,6 +105,45 @@ const ART: Record<string, JSX.Element> = {
       <text x="115" y="155" fontFamily="Archivo Black" fontSize="42" fill="#0A0A0A">Aa</text>
     </svg>
   ),
+  lansia: (
+    <svg viewBox="0 0 220 200" width="72%">
+      {/* sun */}
+      <circle cx="172" cy="46" r="18" fill="#FFE066" stroke="#0A0A0A" strokeWidth="3" />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => {
+        const r = (deg * Math.PI) / 180;
+        return (
+          <line
+            key={deg}
+            x1={172 + Math.cos(r) * 24}
+            y1={46 + Math.sin(r) * 24}
+            x2={172 + Math.cos(r) * 32}
+            y2={46 + Math.sin(r) * 32}
+            stroke="#0A0A0A"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+        );
+      })}
+      {/* park bench backrest */}
+      <rect x="40" y="92" width="120" height="14" rx="3" fill="#fff" stroke="#0A0A0A" strokeWidth="3" />
+      <rect x="40" y="78" width="120" height="14" rx="3" fill="#fff" stroke="#0A0A0A" strokeWidth="3" />
+      {/* seat */}
+      <rect x="36" y="118" width="128" height="16" rx="4" fill="#FF6B6B" stroke="#0A0A0A" strokeWidth="3" />
+      {/* armrests + legs */}
+      <rect x="36" y="78" width="10" height="80" rx="3" fill="#0A0A0A" />
+      <rect x="154" y="78" width="10" height="80" rx="3" fill="#0A0A0A" />
+      {/* ground */}
+      <line x1="20" y1="160" x2="200" y2="160" stroke="#0A0A0A" strokeWidth="3" strokeLinecap="round" />
+      {/* heart */}
+      <path
+        d="M100 150 l-9 -9 a6 6 0 1 1 9 -8 a6 6 0 1 1 9 8 z"
+        fill="#FFB8D9"
+        stroke="#0A0A0A"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
 };
 
 export default function Showcase() {
@@ -119,10 +158,10 @@ export default function Showcase() {
             ◆ See it in action
           </div>
           <h2 className="font-display text-[clamp(40px,5.5vw,84px)] max-w-[900px] tracking-tighter leading-[0.95]">
-            Six papers,
+            Seven papers,
             <br />
             <span className="font-serif italic font-bold text-coral">
-              six stories.
+              seven stories.
             </span>
           </h2>
           <p className="max-w-[640px] mt-6 text-[17px] leading-[1.6] text-[#333]">

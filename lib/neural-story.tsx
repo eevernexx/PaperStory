@@ -29,7 +29,7 @@ export const neuralStory: StorySectionData[] = [
           given lap. The other picks the compound. Together they react to the
           race in progress.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;The optimal strategy depends on every other driver&rsquo;s
           strategy. A network that learned what they actually did is the
           fastest approximation.&rdquo;
@@ -204,7 +204,7 @@ export const neuralStory: StorySectionData[] = [
           reasonable chance of containing some pit-stop examples. Without
           that, gradient updates become extremely noisy.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           The dataset is imbalanced. The loss function has to know that.
         </blockquote>
       </>

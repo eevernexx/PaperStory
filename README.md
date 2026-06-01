@@ -19,6 +19,9 @@ PaperStory transforms academic research papers into immersive scrollytelling exp
 | AR Sebagai Media Pembelajaran Bangun Ruang (Single Marker) | Husnia, Wibisono | JAMASTIKA 2022 | [Read &#8599;](https://ejournal.unwaha.ac.id/index.php/JAMASTIKA) |
 | Virtual Strategy Engineer (Neural Networks for F1) | Heilmeier, Thomaser, Graf, Betz | Appl. Sci. 2020 | [Read &#8599;](https://doi.org/10.3390/app10217805) |
 | Desain Grafis Sebagai Media Ungkap Periklanan | R. Kuncoro Wulan Dewojati | UNY | [Read &#8599;](https://journal.uny.ac.id/) |
+| Kebijakan Pemerintah Kota Semarang dalam Mewujudkan Kota Ramah Lansia | Arneta Rahma Aqila | UNDIP 2023 (Skripsi S-1) | [Read &#8599;](public/skripsi-arneta-kota-ramah-lansia.pdf) |
+
+> The Kota Ramah Lansia entry is an undergraduate thesis (skripsi), so it has no journal publisher — its "Read original paper" button links straight to the full thesis PDF served from `/public`.
 
 ## Tech Stack
 
@@ -64,7 +67,7 @@ paperstory-next/
 |  +- Hero.tsx                Landing hero with floating cards
 |  +- Marquee.tsx             Headline ticker
 |  +- Features.tsx            Asymmetric feature grid
-|  +- Showcase.tsx            6-card paper grid
+|  +- Showcase.tsx            7-card paper grid
 |  +- ShowcaseCard.tsx        Individual paper card
 |  +- CTA.tsx                 Bottom call-to-action
 |  +- Footer.tsx              Site footer
@@ -83,6 +86,7 @@ paperstory-next/
 |     +- ar/        10 scenes
 |     +- neural/    10 scenes
 |     +- design/    10 scenes
+|     +- lansia/    10 scenes
 +- lib/
 |  +- scenes.ts               Story registry, SceneId, per-slug scene order
 |  +- f1-story.tsx            F1 narrative (10 sections)
@@ -91,9 +95,11 @@ paperstory-next/
 |  +- ar-story.tsx            AR narrative
 |  +- neural-story.tsx        Neural narrative
 |  +- design-story.tsx        Design narrative
+|  +- lansia-story.tsx        Age-friendly city narrative
 +- public/
 |  +- favicon.svg
 |  +- og-image.svg
+|  +- skripsi-arneta-kota-ramah-lansia.pdf  Full thesis (linked directly)
 +- styles/
 |  +- globals.css
 +- pdf paper/                  Source PDFs

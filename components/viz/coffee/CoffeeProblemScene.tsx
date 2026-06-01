@@ -18,17 +18,17 @@ export default function CoffeeProblemScene({ active }: { active: boolean }) {
   }, [active, value]);
 
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center p-5 sm:p-10 bg-lavender">
+    <div className="absolute inset-0 flex flex-col items-center justify-center max-[1100px]:justify-start overflow-y-auto p-5 pt-10 sm:p-10 bg-lavender">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
         <span className="text-ink font-bold">SCENE</span> · THE PROBLEM
       </span>
-      <div className="font-display text-[clamp(100px,18vw,240px)] leading-[0.9] tracking-[-0.04em]">
+      <div className="font-display text-[clamp(72px,18vw,240px)] leading-[0.9] tracking-[-0.04em]">
         {display}
       </div>
-      <div className="font-serif italic text-[22px] mt-3 text-center max-w-[360px]">
+      <div className="font-serif italic text-[16px] sm:text-[22px] mt-3 text-center max-w-[360px]">
         misclassifications out of 400 test samples
       </div>
-      <div className="mt-7 bg-white border-3 border-ink rounded-neo-md py-3 px-5 shadow-neo-sm font-mono text-[13px]">
+      <div className="mt-5 sm:mt-7 bg-white border-3 border-ink rounded-neo-md py-2.5 px-4 sm:py-3 sm:px-5 shadow-neo-sm font-mono text-[12px] sm:text-[13px] text-center shrink-0">
         Excelsa ↔ Arabica · 16 of 22 errors
       </div>
     </div>

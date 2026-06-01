@@ -30,7 +30,6 @@ export type ShowcaseCard = {
   title: string;
   blurb: string;
   bgColor: string;
-  featured?: boolean;
   available: boolean;
   paperUrl: string;
   authors: string;
@@ -47,7 +46,6 @@ export const showcase: ShowcaseCard[] = [
     blurb:
       "An MIT and Michigan ASIC that speeds up Fully Homomorphic Encryption by 5,400x, making real-time private deep learning practical.",
     bgColor: "bg-coral",
-    featured: true,
     available: true,
     paperUrl: "https://doi.org/10.1145/3466752.3480070",
     authors: "Feldmann, Samardzic, Krastev, Devadas, Dreslinski, Peikert, Sanchez",
@@ -124,6 +122,22 @@ export const showcase: ShowcaseCard[] = [
     journal: "Universitas Negeri Yogyakarta",
     year: "2009",
   },
+  {
+    slug: "lansia",
+    category: "PUBLIC POLICY · WELFARE",
+    readingTime: "10 min read",
+    title: "Building an Age-Friendly City in Semarang",
+    blurb:
+      "How Semarang's government works toward a WHO age-friendly city - and why the missing piece is a local law that protects its elderly.",
+    bgColor: "bg-pink",
+    available: true,
+    // Undergraduate thesis (skripsi) - no journal publisher, link points
+    // straight to the full thesis PDF served from /public.
+    paperUrl: "/skripsi-arneta-kota-ramah-lansia.pdf",
+    authors: "Arneta Rahma Aqila",
+    journal: "Universitas Diponegoro · Skripsi S-1",
+    year: "2023",
+  },
 ];
 
 // Per-story scene order. Each story has exactly 10 scenes.
@@ -134,4 +148,5 @@ export const sceneOrderByStory: Record<string, SceneId[]> = {
   ar: ["intro", "problem", "motivation", "tech", "dataset", "method", "usability", "results", "impact", "conclusion"],
   neural: ["intro", "problem", "motivation", "architecture", "dataset", "method", "training", "results", "comparison", "conclusion"],
   design: ["intro", "problem", "motivation", "elements", "dataset", "method", "functions", "results", "impact", "conclusion"],
+  lansia: ["intro", "problem", "motivation", "dataset", "articles", "method", "results", "reform", "impact", "conclusion"],
 };

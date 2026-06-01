@@ -9,9 +9,9 @@ export default function CTA() {
       <div className="max-w-[1280px] mx-auto">
         <Reveal>
           <h2 className="font-display text-[clamp(40px,5.5vw,84px)] mx-auto tracking-tighter leading-[0.95] text-paper">
-            Six papers.
+            Seven papers.
             <br />
-            Six{" "}
+            Seven{" "}
             <span className="font-serif italic font-bold text-yellow">
               stories.
             </span>

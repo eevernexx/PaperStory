@@ -75,6 +75,18 @@ import DesignResultsScene from "./viz/design/DesignResultsScene";
 import DesignImpactScene from "./viz/design/DesignImpactScene";
 import DesignConclusionScene from "./viz/design/DesignConclusionScene";
 
+// Lansia (Age-Friendly City - skripsi)
+import LansiaIntroScene from "./viz/lansia/LansiaIntroScene";
+import LansiaProblemScene from "./viz/lansia/LansiaProblemScene";
+import LansiaMotivationScene from "./viz/lansia/LansiaMotivationScene";
+import LansiaDatasetScene from "./viz/lansia/LansiaDatasetScene";
+import LansiaArticlesScene from "./viz/lansia/LansiaArticlesScene";
+import LansiaMethodScene from "./viz/lansia/LansiaMethodScene";
+import LansiaResultsScene from "./viz/lansia/LansiaResultsScene";
+import LansiaReformScene from "./viz/lansia/LansiaReformScene";
+import LansiaImpactScene from "./viz/lansia/LansiaImpactScene";
+import LansiaConclusionScene from "./viz/lansia/LansiaConclusionScene";
+
 type Props = { active: SceneId; slug: string };
 
 export default function VizStage({ active, slug }: Props) {
@@ -171,11 +183,26 @@ export default function VizStage({ active, slug }: Props) {
         default: return null;
       }
     }
+    if (slug === "lansia") {
+      switch (scene) {
+        case "intro": return <LansiaIntroScene />;
+        case "problem": return <LansiaProblemScene active={a} />;
+        case "motivation": return <LansiaMotivationScene active={a} />;
+        case "dataset": return <LansiaDatasetScene active={a} />;
+        case "articles": return <LansiaArticlesScene active={a} />;
+        case "method": return <LansiaMethodScene active={a} />;
+        case "results": return <LansiaResultsScene active={a} />;
+        case "reform": return <LansiaReformScene active={a} />;
+        case "impact": return <LansiaImpactScene active={a} />;
+        case "conclusion": return <LansiaConclusionScene active={a} />;
+        default: return null;
+      }
+    }
     return null;
   };
 
   return (
-    <div className="viz-panel sticky top-[60px] h-[calc(100vh-60px)] py-[30px] pr-10 pl-0 border-l-3 border-ink max-[1100px]:h-[45vh] max-[1100px]:min-h-[340px] max-[1100px]:max-h-[520px] max-[1100px]:border-l-0 max-[1100px]:border-b-3 max-[1100px]:px-4 sm:max-[1100px]:px-6 max-[1100px]:py-3 sm:max-[1100px]:py-4 max-[1100px]:bg-paper">
+    <div className="viz-panel sticky top-[60px] h-[calc(100vh-60px)] py-[30px] pr-10 pl-0 border-l-3 border-ink max-[1100px]:h-[48vh] max-[1100px]:min-h-[380px] max-[1100px]:max-h-[540px] max-[1100px]:border-l-0 max-[1100px]:border-b-3 max-[1100px]:px-4 sm:max-[1100px]:px-6 max-[1100px]:py-3 sm:max-[1100px]:py-4 max-[1100px]:bg-paper">
       <div className="w-full h-full bg-white border-3 border-ink rounded-neo-xl shadow-neo-lg relative overflow-hidden max-h-[900px] min-[1101px]:min-h-[480px]">
         <AnimatePresence mode="wait">
           <motion.div

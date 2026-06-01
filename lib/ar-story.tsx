@@ -29,7 +29,7 @@ export const arStory: StorySectionData[] = [
           the room. Point a phone at the marker. The shape appears. Walk
           around it. The abstraction stops being abstract.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;You cannot teach the volume of a cylinder to someone who has
           never seen its inside.&rdquo;
         </blockquote>
@@ -191,7 +191,7 @@ export const arStory: StorySectionData[] = [
           <li><strong>Uji coba</strong> &middot; usability testing with MI students.</li>
           <li><strong>Deployment</strong> &middot; packaged as a single Android APK.</li>
         </ol>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           A learning tool that needs to be installed by a parent who barely
           uses Android is a learning tool that doesn&rsquo;t reach the child.
         </blockquote>

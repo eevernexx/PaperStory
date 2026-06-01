@@ -13,7 +13,7 @@
   <text x="80" y="270" font-family="Georgia, serif" font-style="italic" font-size="44" fill="#1a1a1a">Research deserves better than PDFs.</text>
 
   <!-- subtitle -->
-  <text x="80" y="330" font-family="Helvetica, sans-serif" font-size="26" fill="#444">Six published papers, reimagined as interactive scrollytelling.</text>
+  <text x="80" y="330" font-family="Helvetica, sans-serif" font-size="26" fill="#444">Seven published papers, reimagined as interactive scrollytelling.</text>
 
   <!-- topic pills -->
   <g font-family="Arial Black, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0A0A0A">

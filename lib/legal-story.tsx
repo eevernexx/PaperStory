@@ -30,7 +30,7 @@ export const legalStory: StorySectionData[] = [
           built to answer it has been quietly losing to the economic regime
           built alongside it.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;An environmental law that is not enforceable is, in
           practice, an investment policy.&rdquo;
         </blockquote>
@@ -186,7 +186,7 @@ export const legalStory: StorySectionData[] = [
           <li><strong>Pengawasan</strong> &middot; supervision. Oversight of compliance.</li>
           <li><strong>Penegakan</strong> &middot; enforcement. Sanctions, administrative through criminal.</li>
         </ol>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           A pipeline is only as strong as its weakest link. In practice, the
           weakest link has been enforcement.
         </blockquote>

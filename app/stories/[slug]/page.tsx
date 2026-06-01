@@ -6,6 +6,7 @@ import { neuralStory } from "@/lib/neural-story";
 import { arStory } from "@/lib/ar-story";
 import { designStory } from "@/lib/design-story";
 import { legalStory } from "@/lib/legal-story";
+import { lansiaStory } from "@/lib/lansia-story";
 import StoryClient from "@/components/StoryClient";
 
 const STORIES = {
@@ -32,6 +33,10 @@ const STORIES = {
   legal: {
     title: "Indonesian Environmental Law · A PaperStory",
     sections: legalStory,
+  },
+  lansia: {
+    title: "Kota Ramah Lansia · A PaperStory",
+    sections: lansiaStory,
   },
 } as const;
 

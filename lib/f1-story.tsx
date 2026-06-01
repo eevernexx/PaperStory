@@ -35,7 +35,7 @@ export const f1Story: StorySectionData[] = [
           Programs. Real-time private deep learning, end to end, on a single
           ASIC.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;5,400x geometric mean. Up to 17,000x peak. The accelerator
           gap closes here.&rdquo;
         </blockquote>
@@ -209,7 +209,7 @@ export const f1Story: StorySectionData[] = [
           32 MB of key-switch hints that get reused across many operations.
           The compiler maximizes that reuse; the architecture trusts it.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           Build the FUs once. Schedule the data movement forever.
         </blockquote>
       </>

@@ -29,7 +29,7 @@ export const designStory: StorySectionData[] = [
           work. Without it, the message is voiceless. With it, the message
           has a body.
         </p>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           &ldquo;Form is not decoration. Form is the meaning becoming
           visible.&rdquo;
         </blockquote>
@@ -112,7 +112,7 @@ export const designStory: StorySectionData[] = [
           <li><strong>Bentuk</strong> &middot; shape. Mass, silhouette, geometric vs. organic.</li>
           <li><strong>Tekstur</strong> &middot; texture. Surface quality, tactile suggestion.</li>
         </ul>
-        <blockquote className="my-7 py-6 px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[21px] leading-[1.45] italic">
+        <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
           A graphic designer is someone who has internalized that four
           ingredients, well-arranged, beat forty arranged carelessly.
         </blockquote>
