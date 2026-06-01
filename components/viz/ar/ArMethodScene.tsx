@@ -3,18 +3,18 @@
 import { motion } from "framer-motion";
 
 const NODES = [
-  { num: "1", label: "Analisis Â· need + target user" },
-  { num: "2", label: "Desain Â· marker + 3D model" },
-  { num: "3", label: "Build Â· Unity + Vuforia" },
-  { num: "4", label: "Uji Â· usability test" },
-  { num: "5", label: "Deploy Â· Android APK", winner: true },
+  { num: "1", label: "Analysis · need + target user" },
+  { num: "2", label: "Design · marker + 3D model" },
+  { num: "3", label: "Build · Unity + Vuforia" },
+  { num: "4", label: "Test · usability" },
+  { num: "5", label: "Deploy · Android APK", winner: true },
 ];
 
 export default function ArMethodScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center max-[1100px]:justify-start p-4 sm:p-[40px] px-4 sm:px-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· METHODOLOGY
+        <span className="text-ink font-bold">SCENE</span> · METHODOLOGY
       </span>
       <div className="font-display text-[18px] mb-5 self-start mt-6">
         Waterfall + Single Marker
@@ -46,7 +46,7 @@ export default function ArMethodScene({ active }: { active: boolean }) {
                 transition={{ duration: 0.3, delay: 0.2 + i * 0.14 }}
                 className="font-display text-[16px] text-ink"
               >
-                â†“
+                ↓
               </motion.div>
             )}
           </div>

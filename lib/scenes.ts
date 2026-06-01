@@ -35,6 +35,8 @@ export type ShowcaseCard = {
   authors: string;
   journal: string;
   year: string;
+  // Optional ownership badge ("pin") shown on the showcase card.
+  pin?: string;
 };
 
 export const showcase: ShowcaseCard[] = [
@@ -65,6 +67,7 @@ export const showcase: ShowcaseCard[] = [
     authors: "Aryasatya M. Aqsel, Eko Hari Rachmawanto",
     journal: "JAIC Vol.9 No.6",
     year: "2025",
+    pin: "Aqsel's paper",
   },
   {
     slug: "legal",
@@ -86,7 +89,7 @@ export const showcase: ShowcaseCard[] = [
     readingTime: "8 min read",
     title: "AR Geometry for Elementary Classrooms",
     blurb:
-      "Single-marker Android AR for bangun ruang, rated 94.67% usability by MI Wasilatul Huda students.",
+      "Single-marker Android AR for 3D geometric solids, rated 94.67% usability by MI Wasilatul Huda students.",
     bgColor: "bg-lavender",
     available: true,
     paperUrl: "https://ejournal.unwaha.ac.id/index.php/JAMASTIKA",
@@ -109,18 +112,19 @@ export const showcase: ShowcaseCard[] = [
     year: "2020",
   },
   {
-    slug: "design",
-    category: "DESIGN · THEORY",
-    readingTime: "8 min read",
-    title: "Graphic Design as the Medium of Advertising",
+    slug: "muthiah",
+    category: "PUBLIC HEALTH · PHARMACY",
+    readingTime: "9 min read",
+    title: "Knowledge, Attitude, and Menstrual Pain in Teens",
     blurb:
-      "Three functions, four elements, five principles. The compact grammar of visual communication.",
+      "A review of ten Indonesian studies asking whether what teenage girls know about dysmenorrhea actually changes how they treat it.",
     bgColor: "bg-yellow",
     available: true,
-    paperUrl: "https://journal.uny.ac.id/",
-    authors: "R. Kuncoro Wulan Dewojati",
-    journal: "Universitas Negeri Yogyakarta",
-    year: "2009",
+    paperUrl: "/paper-muthiah.pdf",
+    authors: "Muthi'ah Irta Zhafirah, Femmy Andrifianie",
+    journal: "Jurnal Inovasi Riset Ilmu Kesehatan (Detector) Vol.4 No.1",
+    year: "2026",
+    pin: "Muthi'ah's paper",
   },
   {
     slug: "lansia",
@@ -135,8 +139,9 @@ export const showcase: ShowcaseCard[] = [
     // straight to the full thesis PDF served from /public.
     paperUrl: "/skripsi-arneta-kota-ramah-lansia.pdf",
     authors: "Arneta Rahma Aqila",
-    journal: "Universitas Diponegoro · Skripsi S-1",
+    journal: "Universitas Diponegoro · Undergraduate Thesis",
     year: "2023",
+    pin: "Arneta's paper",
   },
 ];
 
@@ -147,6 +152,6 @@ export const sceneOrderByStory: Record<string, SceneId[]> = {
   legal: ["intro", "problem", "motivation", "articles", "dataset", "method", "reform", "results", "impact", "conclusion"],
   ar: ["intro", "problem", "motivation", "tech", "dataset", "method", "usability", "results", "impact", "conclusion"],
   neural: ["intro", "problem", "motivation", "architecture", "dataset", "method", "training", "results", "comparison", "conclusion"],
-  design: ["intro", "problem", "motivation", "elements", "dataset", "method", "functions", "results", "impact", "conclusion"],
+  muthiah: ["intro", "problem", "motivation", "dataset", "method", "results", "comparison", "impact", "reform", "conclusion"],
   lansia: ["intro", "problem", "motivation", "dataset", "articles", "method", "results", "reform", "impact", "conclusion"],
 };

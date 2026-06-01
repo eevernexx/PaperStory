@@ -29,7 +29,7 @@ export default function ArResultsScene({ active }: { active: boolean }) {
         {display}%
       </div>
       <div className="font-serif italic text-[22px] mt-3 text-center max-w-[360px]">
-        rated &ldquo;sangat layak digunakan&rdquo; by MI Wasilatul Huda students
+        rated &ldquo;highly suitable for use&rdquo; by MI Wasilatul Huda students
       </div>
     </div>
   );

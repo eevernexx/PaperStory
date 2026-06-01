@@ -24,6 +24,12 @@ export default function ShowcaseCardComponent({ card, art, delay = 0 }: Props) {
       <div
         className={`h-[220px] sm:h-[280px] border-b-3 border-ink relative overflow-hidden flex items-center justify-center ${card.bgColor}`}
       >
+        {card.pin && (
+          <span className="absolute top-3 right-3 z-10 flex items-center gap-1.5 rotate-3 bg-coral text-paper border-2 border-ink rounded-full pl-2 pr-3 py-1 font-display text-[11px] sm:text-[12px] tracking-wide shadow-neo-xs">
+            <span className="w-2 h-2 rounded-full bg-paper border border-ink" />
+            {card.pin}
+          </span>
+        )}
         {art}
       </div>
       <div className="p-5 pb-6 sm:p-6 sm:pb-7">

@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 
 const NODES = [
   { num: "1", label: "Raw smartphone images" },
-  { num: "2", label: "Preprocess Â· 224Ã—224, Gaussian" },
-  { num: "3", label: "Offline augmentation Â· 8 techniques" },
-  { num: "4", label: "Stage 1 Â· ResNet50 frozen" },
-  { num: "5", label: "Stage 2 Â· fine-tune 121 layers" },
-  { num: "â˜…", label: "94.50% accuracy", winner: true },
+  { num: "2", label: "Preprocess · 224×224, Gaussian" },
+  { num: "3", label: "Offline augmentation · 8 techniques" },
+  { num: "4", label: "Stage 1 · ResNet50 frozen" },
+  { num: "5", label: "Stage 2 · fine-tune 121 layers" },
+  { num: "★", label: "94.50% accuracy", winner: true },
 ];
 
 export default function CoffeeMethodScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center max-[1100px]:justify-start p-4 sm:p-[40px] px-4 sm:px-10 bg-sky overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· METHODOLOGY
+        <span className="text-ink font-bold">SCENE</span> · METHODOLOGY
       </span>
       <div className="font-display text-[18px] mb-5 self-start mt-6">
         Two-stage transfer learning
@@ -47,7 +47,7 @@ export default function CoffeeMethodScene({ active }: { active: boolean }) {
                 transition={{ duration: 0.3, delay: 0.2 + i * 0.12 }}
                 className="font-display text-[16px] text-ink"
               >
-                â†“
+                ↓
               </motion.div>
             )}
           </div>

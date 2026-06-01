@@ -63,17 +63,17 @@ import NeuralResultsScene from "./viz/neural/NeuralResultsScene";
 import NeuralComparisonScene from "./viz/neural/NeuralComparisonScene";
 import NeuralConclusionScene from "./viz/neural/NeuralConclusionScene";
 
-// Design
-import DesignIntroScene from "./viz/design/DesignIntroScene";
-import DesignProblemScene from "./viz/design/DesignProblemScene";
-import DesignMotivationScene from "./viz/design/DesignMotivationScene";
-import DesignElementsScene from "./viz/design/DesignElementsScene";
-import DesignDatasetScene from "./viz/design/DesignDatasetScene";
-import DesignMethodScene from "./viz/design/DesignMethodScene";
-import DesignFunctionsScene from "./viz/design/DesignFunctionsScene";
-import DesignResultsScene from "./viz/design/DesignResultsScene";
-import DesignImpactScene from "./viz/design/DesignImpactScene";
-import DesignConclusionScene from "./viz/design/DesignConclusionScene";
+// Muthiah (Knowledge, Attitude & Menstrual Pain)
+import MuthiahIntroScene from "./viz/muthiah/MuthiahIntroScene";
+import MuthiahProblemScene from "./viz/muthiah/MuthiahProblemScene";
+import MuthiahMotivationScene from "./viz/muthiah/MuthiahMotivationScene";
+import MuthiahDatasetScene from "./viz/muthiah/MuthiahDatasetScene";
+import MuthiahMethodScene from "./viz/muthiah/MuthiahMethodScene";
+import MuthiahResultsScene from "./viz/muthiah/MuthiahResultsScene";
+import MuthiahComparisonScene from "./viz/muthiah/MuthiahComparisonScene";
+import MuthiahImpactScene from "./viz/muthiah/MuthiahImpactScene";
+import MuthiahReformScene from "./viz/muthiah/MuthiahReformScene";
+import MuthiahConclusionScene from "./viz/muthiah/MuthiahConclusionScene";
 
 // Lansia (Age-Friendly City - skripsi)
 import LansiaIntroScene from "./viz/lansia/LansiaIntroScene";
@@ -168,18 +168,18 @@ export default function VizStage({ active, slug }: Props) {
         default: return null;
       }
     }
-    if (slug === "design") {
+    if (slug === "muthiah") {
       switch (scene) {
-        case "intro": return <DesignIntroScene />;
-        case "problem": return <DesignProblemScene active={a} />;
-        case "motivation": return <DesignMotivationScene active={a} />;
-        case "elements": return <DesignElementsScene active={a} />;
-        case "dataset": return <DesignDatasetScene active={a} />;
-        case "method": return <DesignMethodScene active={a} />;
-        case "functions": return <DesignFunctionsScene active={a} />;
-        case "results": return <DesignResultsScene active={a} />;
-        case "impact": return <DesignImpactScene active={a} />;
-        case "conclusion": return <DesignConclusionScene active={a} />;
+        case "intro": return <MuthiahIntroScene />;
+        case "problem": return <MuthiahProblemScene active={a} />;
+        case "motivation": return <MuthiahMotivationScene active={a} />;
+        case "dataset": return <MuthiahDatasetScene active={a} />;
+        case "method": return <MuthiahMethodScene active={a} />;
+        case "results": return <MuthiahResultsScene active={a} />;
+        case "comparison": return <MuthiahComparisonScene active={a} />;
+        case "impact": return <MuthiahImpactScene active={a} />;
+        case "reform": return <MuthiahReformScene active={a} />;
+        case "conclusion": return <MuthiahConclusionScene active={a} />;
         default: return null;
       }
     }

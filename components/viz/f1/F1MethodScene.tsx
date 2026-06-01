@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const NODES = [
-  { num: "1", label: "Wide-vector procs Â· 128 lanes" },
-  { num: "2", label: "Specialized FUs Â· NTT, Aut, ModMul" },
+  { num: "1", label: "Wide-vector procs · 128 lanes" },
+  { num: "2", label: "Specialized FUs · NTT, Aut, ModMul" },
   { num: "3", label: "Decoupled data orchestration" },
-  { num: "4", label: "64 MB scratchpad Â· reuse-first" },
+  { num: "4", label: "64 MB scratchpad · reuse-first" },
   { num: "5", label: "Static compiler scheduling", winner: true },
 ];
 
@@ -14,7 +14,7 @@ export default function F1MethodScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center max-[1100px]:justify-start p-4 sm:p-[40px] px-4 sm:px-10 bg-yellow overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· METHODOLOGY
+        <span className="text-ink font-bold">SCENE</span> · METHODOLOGY
       </span>
       <div className="font-display text-[18px] mb-5 self-start mt-6">
         Five design principles

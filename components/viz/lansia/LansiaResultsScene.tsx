@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const PROGRAMS = [
-  "Bina Keluarga Lansia (BKL)",
-  "Sekolah Lansia",
-  "Posyandu & Puskesmas Lansia",
-  "Home care & permakanan",
+  "Elderly family development groups",
+  "Senior schools",
+  "Community health posts & clinics",
+  "Home care & meal delivery",
   "Geriatric pathways, seats & toilets",
 ];
 

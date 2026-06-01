@@ -31,7 +31,7 @@ export const lansiaStory: StorySectionData[] = [
           actually live the policy.
         </p>
         <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
-          &ldquo;A society&rsquo;s welfare is best read at its edges &mdash; in
+          &ldquo;A society&rsquo;s welfare is best read at its edges - in
           how it treats the very old.&rdquo;
         </blockquote>
       </>
@@ -49,7 +49,7 @@ export const lansiaStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           By 2018, roughly 156,900 of Semarang&rsquo;s residents were elderly
-          &mdash; about 8.78% of the city, up from 8.17% just two years
+          - about 8.78% of the city, up from 8.17% just two years
           earlier. Every year adds several thousand more seniors. Demographers
           call this an <em>ageing population</em>, and it is a new kind of
           challenge.
@@ -79,9 +79,9 @@ export const lansiaStory: StorySectionData[] = [
           <span className="font-serif italic text-coral">city?</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          The goal of a Kota Ramah Lansia is that seniors feel safe and
-          comfortable enough to keep living fully &mdash; to move, gather, and
-          contribute &mdash; even in their senja years.
+          The goal of an age-friendly city is that seniors feel safe and
+          comfortable enough to keep living fully - to move, gather, and
+          contribute - even in their twilight years.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           That means three things at once. Comfort: streets, parks, and homes
@@ -120,7 +120,7 @@ export const lansiaStory: StorySectionData[] = [
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           The thesis draws on national statistics, regional planning documents,
-          and field interviews to build this picture &mdash; data and lived
+          and field interviews to build this picture - data and lived
           experience side by side.
         </p>
       </>
@@ -166,14 +166,14 @@ export const lansiaStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           The research is descriptive qualitative, located in Semarang, built
-          from interviews with the city&rsquo;s relevant agencies (OPD), program
+          from interviews with the city&rsquo;s relevant agencies, program
           implementers, and elderly residents themselves.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           William Dunn frames a policy as one system of three interlocking
           parts: the <strong>public policy</strong> itself (plans, rules,
           budgets), the <strong>policy actors</strong> who carry it out, and
-          the <strong>policy environment</strong> &mdash; the communities and
+          the <strong>policy environment</strong> - the communities and
           families it lands in.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
@@ -196,16 +196,16 @@ export const lansiaStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           The finding is encouraging: Semarang has genuinely been working
-          toward an age-friendly city. It leans on national law &mdash;
-          statutes, the RPJMN and RPJMD, the national and regional action plans
-          for the elderly &mdash; and runs real programs on top of them.
+          toward an age-friendly city. It leans on national law -
+          statutes, the national and regional development plans, the action
+          plans for the elderly - and runs real programs on top of them.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          Bina Keluarga Lansia, Sekolah Lansia, posyandu and puskesmas for
-          seniors, home care and meal programs, plus physical touches like
-          geriatric pathways, reserved seats, elderly toilets, and special
-          fares. Officials across agencies share a common understanding of what
-          a Kota Ramah Lansia should be.
+          Elderly family development groups, senior schools, community health
+          posts and clinics for seniors, home care and meal programs, plus
+          physical touches like geriatric pathways, reserved seats, elderly
+          toilets, and special fares. Officials across agencies share a common
+          understanding of what an age-friendly city should be.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           In other words, the will is clearly there. So what is missing?
@@ -225,14 +225,14 @@ export const lansiaStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           The study&rsquo;s central recommendation is direct: Semarang should,
-          as soon as possible, pass a local regulation (Perda) dedicated to the
-          elderly &mdash; the legal umbrella that everything else can hang from.
+          as soon as possible, pass a dedicated local regulation for the
+          elderly - the legal umbrella that everything else can hang from.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          Alongside it: strengthen the PPLKS elderly association, run real
-          public education and socialisation so the wider community values its
+          Alongside it: strengthen the elderly welfare association, run real
+          public education and outreach so the wider community values its
           seniors, upgrade age-friendly facilities, and provide green open
-          spaces &mdash; city-centre parks made for the elderly to gather in.
+          spaces - city-centre parks made for the elderly to gather in.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           The aim is to give older residents a larger, supported space to stay
@@ -260,12 +260,12 @@ export const lansiaStory: StorySectionData[] = [
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           Without that umbrella, budgets are hard to allocate and implementers
           struggle to coordinate. Communication between agencies stays
-          temporary rather than sustained. Bodies like PPLKS exist but
-          under-deliver, and too few champions promote the cause publicly.
+          temporary rather than sustained. Bodies meant to support them exist
+          but under-deliver, and too few champions promote the cause publicly.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           The sharpest edge is at home: when families and neighbours do not
-          prioritise their elders, even good facilities go unused &mdash; and
+          prioritise their elders, even good facilities go unused - and
           seniors end up lonely.
         </p>
       </>
@@ -289,7 +289,7 @@ export const lansiaStory: StorySectionData[] = [
             },
             {
               k: "The law is the missing keystone.",
-              v: "No dedicated elderly Perda means stalled plans, fragile budgets, and weak coordination. A legal umbrella is the single highest-leverage fix.",
+              v: "No dedicated elderly law means stalled plans, fragile budgets, and weak coordination. A legal umbrella is the single highest-leverage fix.",
             },
             {
               k: "Policy ends at the doorstep.",
@@ -313,7 +313,7 @@ export const lansiaStory: StorySectionData[] = [
           authors={card.authors}
           journal={card.journal}
           year={card.year}
-          license="Skripsi S-1"
+          license="Undergraduate Thesis"
         />
         <PaperLinkButton
           url={card.paperUrl}

@@ -97,12 +97,37 @@ const ART: Record<string, JSX.Element> = {
       <text x="220" y="148" fontFamily="JetBrains Mono" fontSize="9" textAnchor="middle" fill="#0A0A0A">tire</text>
     </svg>
   ),
-  design: (
-    <svg viewBox="0 0 200 200" width="70%">
-      <rect x="30" y="30" width="50" height="50" fill="#FF6B6B" stroke="#0A0A0A" strokeWidth="3" />
-      <circle cx="140" cy="55" r="28" fill="#B8F2C9" stroke="#0A0A0A" strokeWidth="3" />
-      <polygon points="55,110 90,170 20,170" fill="#C9B6FF" stroke="#0A0A0A" strokeWidth="3" />
-      <text x="115" y="155" fontFamily="Archivo Black" fontSize="42" fill="#0A0A0A">Aa</text>
+  muthiah: (
+    <svg viewBox="0 0 200 200" width="62%">
+      {/* calendar body */}
+      <rect x="36" y="46" width="128" height="118" rx="12" fill="#fff" stroke="#0A0A0A" strokeWidth="3.5" />
+      {/* header bar */}
+      <path d="M36 70 a12 12 0 0 1 12 -12 h104 a12 12 0 0 1 12 12 v6 H36 Z" fill="#FF6B6B" stroke="#0A0A0A" strokeWidth="3.5" />
+      {/* binder rings */}
+      <rect x="66" y="36" width="8" height="26" rx="4" fill="#0A0A0A" />
+      <rect x="126" y="36" width="8" height="26" rx="4" fill="#0A0A0A" />
+      {/* day dots */}
+      {[0, 1, 2, 3].map((c) =>
+        [0, 1, 2].map((r) => (
+          <circle
+            key={`${c}-${r}`}
+            cx={58 + c * 28}
+            cy={92 + r * 24}
+            r="5"
+            fill={c === 2 && r === 1 ? "none" : "#0A0A0A"}
+            opacity={c === 2 && r === 1 ? 0 : 0.55}
+          />
+        ))
+      )}
+      {/* highlighted day with heart */}
+      <circle cx="114" cy="116" r="15" fill="#FFB8D9" stroke="#0A0A0A" strokeWidth="3" />
+      <path
+        d="M114 124 l-7 -7 a4.6 4.6 0 1 1 7 -6 a4.6 4.6 0 1 1 7 6 z"
+        fill="#FF6B6B"
+        stroke="#0A0A0A"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
     </svg>
   ),
   lansia: (

@@ -19,13 +19,13 @@ export const arStory: StorySectionData[] = [
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           For an elementary school student in Bojonegoro, the word
-          &ldquo;tabung&rdquo; is a flat picture in a textbook. The volume
+          &ldquo;cylinder&rdquo; is a flat picture in a textbook. The volume
           formula is a string of letters that doesn&rsquo;t connect to
           anything they can hold.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           We built an Android app that uses a single AR marker to project six
-          bangun ruang (cube, cuboid, cylinder, cone, sphere, pyramid) into
+          3D solids (cube, cuboid, cylinder, cone, sphere, pyramid) into
           the room. Point a phone at the marker. The shape appears. Walk
           around it. The abstraction stops being abstract.
         </p>
@@ -48,14 +48,14 @@ export const arStory: StorySectionData[] = [
           <span className="font-serif italic text-coral">flat.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          Bangun ruang is taught at primary level using a blackboard, a
+          Solid geometry is taught at primary level using a blackboard, a
           textbook, and a teacher&rsquo;s gesture in the air. The shape
           lives in two dimensions on the page and one of mime in the
           classroom. Students are asked to imagine the rest.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           At MI Wasilatul Huda in Ngasem, Bojonegoro, interest in
-          mathematics was low. Students struggled with bangun ruang
+          mathematics was low. Students struggled with 3D shapes
           specifically. Without a tactile object, the gap between a face on
           paper and a volume in the mind stays open.
         </p>
@@ -140,8 +140,8 @@ export const arStory: StorySectionData[] = [
           <span className="font-serif italic text-coral">APK.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
-          The app bundles six shapes (kubus, balok, tabung, kerucut, bola,
-          limas) each rendered with edges, faces, and labels. The student
+          The app bundles six shapes (cube, cuboid, cylinder, cone, sphere,
+          pyramid) each rendered with edges, faces, and labels. The student
           selects a shape; the app waits for the marker.
         </p>
         <div className="grid grid-cols-2 gap-3.5 my-6 mb-8">
@@ -185,10 +185,10 @@ export const arStory: StorySectionData[] = [
           for a tool with a fixed scope and a defined audience.
         </p>
         <ol className="list-decimal pl-6 space-y-2 mb-6 text-[16.5px]">
-          <li><strong>Analisis</strong> &middot; interview teachers, profile target devices.</li>
-          <li><strong>Desain</strong> &middot; marker + 3D models for six shapes.</li>
-          <li><strong>Implementasi</strong> &middot; Unity + Vuforia for marker tracking.</li>
-          <li><strong>Uji coba</strong> &middot; usability testing with MI students.</li>
+          <li><strong>Analysis</strong> &middot; interview teachers, profile target devices.</li>
+          <li><strong>Design</strong> &middot; marker + 3D models for six shapes.</li>
+          <li><strong>Implementation</strong> &middot; Unity + Vuforia for marker tracking.</li>
+          <li><strong>Testing</strong> &middot; usability testing with MI students.</li>
           <li><strong>Deployment</strong> &middot; packaged as a single Android APK.</li>
         </ol>
         <blockquote className="my-7 py-5 px-6 sm:py-6 sm:px-7 bg-yellow border-3 border-ink rounded-neo-md shadow-neo-sm font-serif text-[17px] sm:text-[18px] leading-[1.45] italic text-center">
@@ -206,13 +206,12 @@ export const arStory: StorySectionData[] = [
         <h2 className="font-display text-[clamp(36px,4.5vw,62px)] tracking-tight mb-7 leading-[1.0]">
           94.67%
           <br />
-          <span className="font-serif italic text-coral">layak.</span>
+          <span className="font-serif italic text-coral">suitable.</span>
         </h2>
         <p className="font-serif text-[22px] leading-[1.4] text-[#1a1a1a] mb-6">
           The usability test, conducted with MI Wasilatul Huda Ngasem
           Bojonegoro students, returned a composite score of 94.67%. The
-          rubric category: &ldquo;sangat layak digunakan&rdquo;, highly
-          suitable for use.
+          rubric placed it in the top band: highly suitable for use.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
           Breakdown across sub-criteria was tight: ease of use, interface
@@ -277,7 +276,7 @@ export const arStory: StorySectionData[] = [
           before.
         </p>
         <p className="text-[17.5px] leading-[1.65] mb-4 text-[#1a1a1a]">
-          The template scales. Replace bangun ruang with biology cells, with
+          The template scales. Replace solid shapes with biology cells, with
           molecular structures, with historical artifacts. The marker is
           paper. The classroom is anywhere.
         </p>

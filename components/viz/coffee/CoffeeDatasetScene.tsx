@@ -13,14 +13,14 @@ export default function CoffeeDatasetScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· DATASET
+        <span className="text-ink font-bold">SCENE</span> · DATASET
       </span>
       <div className="p-[30px] flex flex-col h-full">
         <div className="font-display text-[18px] mb-1">
-          2,000 images Â· balanced
+          2,000 images · balanced
         </div>
         <div className="font-mono text-xs text-[#555] mb-6">
-          500 per class Â· smartphone captures
+          500 per class · smartphone captures
         </div>
         <div className="flex-1 flex items-end gap-4 pb-12">
           {CLASSES.map((c, i) => (

@@ -15,7 +15,7 @@ export default function LegalProblemScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-lavender overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· BACKGROUND
+        <span className="text-ink font-bold">SCENE</span> · BACKGROUND
       </span>
       <div className="font-display text-[20px] mb-5 mt-8 px-2">
         How we got to UU 32/2009

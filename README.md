@@ -14,14 +14,15 @@ PaperStory transforms academic research papers into immersive scrollytelling exp
 | Story | Authors | Published | Read |
 |---|---|---|---|
 | F1: A Fast and Programmable Accelerator for FHE | Feldmann, Samardzic, Krastev, Devadas, Dreslinski, Peikert, Sanchez | MICRO 2021 | [Read &#8599;](https://doi.org/10.1145/3466752.3480070) |
-| A Roasted Coffee Bean Identification Using ResNet50 | Aqsel, Rachmawanto | JAIC 2025 | [Read &#8599;](http://jurnal.polibatam.ac.id/index.php/JAIC) |
-| Legal Politics of Indonesian Environmental Management | Mahardika, Bayu | IJEL 2022 | [Read &#8599;](https://doi.org/10.15294/ijel.v1i1.56781) |
-| AR Sebagai Media Pembelajaran Bangun Ruang (Single Marker) | Husnia, Wibisono | JAMASTIKA 2022 | [Read &#8599;](https://ejournal.unwaha.ac.id/index.php/JAMASTIKA) |
-| Virtual Strategy Engineer (Neural Networks for F1) | Heilmeier, Thomaser, Graf, Betz | Appl. Sci. 2020 | [Read &#8599;](https://doi.org/10.3390/app10217805) |
-| Desain Grafis Sebagai Media Ungkap Periklanan | R. Kuncoro Wulan Dewojati | UNY | [Read &#8599;](https://journal.uny.ac.id/) |
-| Kebijakan Pemerintah Kota Semarang dalam Mewujudkan Kota Ramah Lansia | Arneta Rahma Aqila | UNDIP 2023 (Skripsi S-1) | [Read &#8599;](public/skripsi-arneta-kota-ramah-lansia.pdf) |
+| Coffee Bean Classification with ResNet50 | Aqsel, Rachmawanto | JAIC 2025 | [Read &#8599;](http://jurnal.polibatam.ac.id/index.php/JAIC) |
+| Indonesian Environmental Law: Discourse and Reform | Mahardika, Bayu | IJEL 2022 | [Read &#8599;](https://doi.org/10.15294/ijel.v1i1.56781) |
+| AR Geometry for Elementary Classrooms | Husnia, Wibisono | JAMASTIKA 2022 | [Read &#8599;](https://ejournal.unwaha.ac.id/index.php/JAMASTIKA) |
+| A Virtual Strategy Engineer for Formula 1 | Heilmeier, Thomaser, Graf, Betz | Appl. Sci. 2020 | [Read &#8599;](https://doi.org/10.3390/app10217805) |
+| Knowledge, Attitude &amp; Menstrual Pain in Teens | Zhafirah, Andrifianie | Detector 2026 | [Read &#8599;](public/paper-muthiah.pdf) |
+| Building an Age-Friendly City in Semarang | Arneta Rahma Aqila | UNDIP 2023 (Undergraduate Thesis) | [Read &#8599;](public/skripsi-arneta-kota-ramah-lansia.pdf) |
 
-> The Kota Ramah Lansia entry is an undergraduate thesis (skripsi), so it has no journal publisher — its "Read original paper" button links straight to the full thesis PDF served from `/public`.
+> Three cards carry an ownership pin: Coffee ("Aqsel's paper"), Menstrual Pain ("Muthi'ah's paper"), and Age-Friendly City ("Arneta's paper").
+> The Menstrual Pain review and the Age-Friendly City thesis have no external article link, so their "Read original paper" button opens the full PDF served from `/public`.
 
 ## Tech Stack
 
@@ -85,7 +86,7 @@ paperstory-next/
 |     +- legal/     10 scenes
 |     +- ar/        10 scenes
 |     +- neural/    10 scenes
-|     +- design/    10 scenes
+|     +- muthiah/   10 scenes
 |     +- lansia/    10 scenes
 +- lib/
 |  +- scenes.ts               Story registry, SceneId, per-slug scene order
@@ -94,11 +95,12 @@ paperstory-next/
 |  +- legal-story.tsx         Legal narrative
 |  +- ar-story.tsx            AR narrative
 |  +- neural-story.tsx        Neural narrative
-|  +- design-story.tsx        Design narrative
+|  +- muthiah-story.tsx       Knowledge, attitude & menstrual pain narrative
 |  +- lansia-story.tsx        Age-friendly city narrative
 +- public/
 |  +- favicon.svg
 |  +- og-image.svg
+|  +- paper-muthiah.pdf                     Menstrual-pain review (linked directly)
 |  +- skripsi-arneta-kota-ramah-lansia.pdf  Full thesis (linked directly)
 +- styles/
 |  +- globals.css

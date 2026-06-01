@@ -4,7 +4,7 @@ import { f1Story } from "@/lib/f1-story";
 import { coffeeStory } from "@/lib/coffee-story";
 import { neuralStory } from "@/lib/neural-story";
 import { arStory } from "@/lib/ar-story";
-import { designStory } from "@/lib/design-story";
+import { muthiahStory } from "@/lib/muthiah-story";
 import { legalStory } from "@/lib/legal-story";
 import { lansiaStory } from "@/lib/lansia-story";
 import StoryClient from "@/components/StoryClient";
@@ -23,19 +23,19 @@ const STORIES = {
     sections: neuralStory,
   },
   ar: {
-    title: "AR Bangun Ruang · A PaperStory",
+    title: "AR Geometry for Classrooms · A PaperStory",
     sections: arStory,
   },
-  design: {
-    title: "Graphic Design in Advertising · A PaperStory",
-    sections: designStory,
+  muthiah: {
+    title: "Knowledge, Attitude & Menstrual Pain · A PaperStory",
+    sections: muthiahStory,
   },
   legal: {
     title: "Indonesian Environmental Law · A PaperStory",
     sections: legalStory,
   },
   lansia: {
-    title: "Kota Ramah Lansia · A PaperStory",
+    title: "Age-Friendly City · A PaperStory",
     sections: lansiaStory,
   },
 } as const;

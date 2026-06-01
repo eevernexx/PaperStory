@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const GAPS = [
-  { k: "No legal umbrella", v: "No Perda dedicated to the elderly" },
+  { k: "No legal umbrella", v: "No law dedicated to the elderly" },
   { k: "Budget stalls", v: "Without a law, funding is hard to lock in" },
   { k: "Coordination slips", v: "Programs run, but not in sync" },
 ];

@@ -3,22 +3,22 @@
 import { motion } from "framer-motion";
 
 const SHAPES = [
-  { name: "Kubus", desc: "Cube Â· 6 faces" },
-  { name: "Balok", desc: "Cuboid Â· 6 faces" },
-  { name: "Tabung", desc: "Cylinder" },
-  { name: "Kerucut", desc: "Cone" },
-  { name: "Bola", desc: "Sphere" },
-  { name: "Limas", desc: "Pyramid" },
+  { name: "Cube", desc: "6 square faces" },
+  { name: "Cuboid", desc: "6 rectangular faces" },
+  { name: "Cylinder", desc: "2 circles + curve" },
+  { name: "Cone", desc: "circle + apex" },
+  { name: "Sphere", desc: "one surface" },
+  { name: "Pyramid", desc: "square base" },
 ];
 
 export default function ArDatasetScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-10 bg-peach overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· SHAPES
+        <span className="text-ink font-bold">SCENE</span> · SHAPES
       </span>
       <div className="font-display text-[20px] mb-5 mt-8 px-2">
-        Six bangun ruang in AR
+        Six 3D solids in AR
       </div>
       <div className="grid grid-cols-2 gap-3 px-2 pb-6">
         {SHAPES.map((s, i) => (

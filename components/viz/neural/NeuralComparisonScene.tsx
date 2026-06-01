@@ -13,10 +13,10 @@ export default function NeuralComparisonScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-stretch justify-center max-[1100px]:justify-start p-5 sm:p-8 bg-lavender overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· COMPARISON
+        <span className="text-ink font-bold">SCENE</span> · COMPARISON
       </span>
       <div className="font-display text-[18px] mb-1 px-2 mt-6">VSE vs alternatives</div>
-      <div className="font-mono text-xs text-[#555] mb-4 px-2">manual input Â· Markov chain Â· the VSE (this work)</div>
+      <div className="font-mono text-xs text-[#555] mb-4 px-2">manual input · Markov chain · the VSE (this work)</div>
       <div className="px-2 grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-x-3 gap-y-2 text-[11.5px]">
         <div className="font-display text-[11px] uppercase tracking-wider text-[#555]">Property</div>
         <div className="font-display text-[11px] uppercase tracking-wider text-[#555] text-right">Manual</div>

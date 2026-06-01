@@ -3,22 +3,22 @@
 import { motion } from "framer-motion";
 
 const STEPS = [
-  { num: "1", label: "Perencanaan Â· Planning" },
-  { num: "2", label: "Pemanfaatan Â· Utilization" },
-  { num: "3", label: "Pengendalian Â· Control" },
-  { num: "4", label: "Pemeliharaan Â· Maintenance" },
-  { num: "5", label: "Pengawasan Â· Supervision" },
-  { num: "6", label: "Penegakan Â· Enforcement", winner: true },
+  { num: "1", label: "Perencanaan · Planning" },
+  { num: "2", label: "Pemanfaatan · Utilization" },
+  { num: "3", label: "Pengendalian · Control" },
+  { num: "4", label: "Pemeliharaan · Maintenance" },
+  { num: "5", label: "Pengawasan · Supervision" },
+  { num: "6", label: "Penegakan · Enforcement", winner: true },
 ];
 
 export default function LegalMethodScene({ active }: { active: boolean }) {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center max-[1100px]:justify-start p-4 sm:p-[40px] px-4 sm:px-10 bg-mint overflow-y-auto">
       <span className="absolute top-3 left-4 sm:top-5 sm:left-6 font-mono text-[10px] sm:text-[11px] tracking-widest uppercase text-[#666]">
-        <span className="text-ink font-bold">SCENE</span> Â· LAW
+        <span className="text-ink font-bold">SCENE</span> · LAW
       </span>
       <div className="font-display text-[18px] mb-4 self-start mt-6">
-        UU 32/2009 Â· the 6 Ps pipeline
+        UU 32/2009 · the 6 Ps pipeline
       </div>
       <div className="flex flex-col gap-2 w-full max-w-[380px] mx-auto pb-6">
         {STEPS.map((n, i) => (
@@ -47,7 +47,7 @@ export default function LegalMethodScene({ active }: { active: boolean }) {
                 transition={{ duration: 0.3, delay: 0.2 + i * 0.1 }}
                 className="font-display text-[14px] text-ink"
               >
-                â†“
+                ↓
               </motion.div>
             )}
           </div>
